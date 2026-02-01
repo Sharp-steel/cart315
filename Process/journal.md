@@ -8,3 +8,10 @@ As someone who has created a game with Bitsy before, I wasn’t going into this 
 <img width="706" height="706" alt="image" src="https://github.com/user-attachments/assets/85e4dd0a-46d8-438e-9ff8-3da5ee0966d8" />
 <img width="706" height="708" alt="image" src="https://github.com/user-attachments/assets/d01b2b33-9785-4285-82e1-4570065627ff" />
 
+## DESIGN JOURNAL - Exploration Prototype - Week 1
+
+While selecting which prototype I wanted to mess around with from Matthew's repetoire, I intially chose PurrrfectPizza, since the title sounded fun. But Unity was very mean to me since it said the files was 4 years old (outdated apparently) and wouldn't open. I'm not very happy with Unity. I'm not sure if I have to choose a game that's less than 4 years old since I only have the newest version of Unity on my computer. Since unfortunately we didn't get to finish our class exercise because, again, Unity :), I wanted to explore more the idea of collision and test out various things within Matthew's library of games (at least that's what I assumed we had to do for this journal).
+
+Despite this minor setback, I would still love to test out different interactions, movements and collisions within Unity since I never got to finish or go through the full process of understanding how it works. Again, we love Unity :). Hopefully I can understand what went wrong for next time and I can affectively get a better grasp at how to use this program as I have never used it before this class and based on what I want to do in the future, it's kind of an essentially to learn at least the basics of how Unity works.
+
+I also forgot how to put this entry at the top of the markdown file so I'm sorry Matthew if you are reading this I promise not to do it again. :/
