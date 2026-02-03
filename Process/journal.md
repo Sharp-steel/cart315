@@ -15,3 +15,37 @@ While selecting which prototype I wanted to mess around with from Matthew's repe
 Despite this minor setback, I would still love to test out different interactions, movements and collisions within Unity since I never got to finish or go through the full process of understanding how it works. Again, we love Unity :). Hopefully I can understand what went wrong for next time and I can affectively get a better grasp at how to use this program as I have never used it before this class and based on what I want to do in the future, it's kind of an essentially to learn at least the basics of how Unity works.
 
 I also forgot how to put this entry at the top of the markdown file so I'm sorry Matthew if you are reading this I promise not to do it again. :/
+
+## DESIGN JOURNAL - Exploration Prototype - Week 2
+
+I made a game! I participated in the McGill Game Jam 2026 with Arielle, Jimmy, Hubert and Owen.
+
+This was such a tiring process, but I am so happy of what we created in the end.
+
+The theme of the Game Jam was The Hunt.
+
+I was the lead game designer/prototyper. I was responsible for coming up with ideas for the type of game we created. We ended up creating a top-down boss rush game, where you played the role of The Fellmonger, a hunter-gatherer tasked with defeating The Luminaire and The Frightful.
+
+Below is also a google doc of my design process, where I threw down a bunch of ideas and concepts, including moodboards for characters, boss and character mechanics, and even scrapped dialogue.
+
+[Link to Google Doc](https://docs.google.com/document/d/1ThPSKbH6iCJAW1368ySmKIcED36JX3PIkeqGiQojqJw/edit?tab=t.14v3fia0b3l0)
+
+We started off the Jam by discussing various things that first came to mind when discussing the hunt. We discussed food, hunting, wolves, monsters, bow and arrows amongst various other ideas.
+
+![Game Ideas for our Game Jam](/Screenshots/JamDesign.png)
+
+We then refined our ideas into a boss rush, and decided to keep or scope at a maximum of 2 bosses since we wouldn't have enough time to animate or program any more bosses.
+
+I worked alongside Arielle and Owen to give them instructions and feedback on the artwork, since they were responsible for environmental and character art respectively.
+I also worked alongside Hubert who was responsible for creating the soundtrack for the game, providing feedback on his sounds, mostly involving minor changes.
+
+After the prototyping and game design process was done, I started to mess around with Unity a bit, and was asked to add some particle effects (Which was never implemented but oh well). It was fun to learn the process of how particles in Unity work.
+
+On the last day, since all that was left was to polish the game, I added the first corridor room in Unity, and after that I was put in the programming chair since that was all that was largely left to do.
+
+Now if you know me well enough, then you will know that programming doesn't come naturally to me. I suck at it. I couldn't tell you what a boolean is even though I've been taught it like 5 different times. It's bad. So I struggled a lot with understanding what I was to do at all. I also had a lot of issues with merging in GitHub, and then Jimmy told me to install Git and to push and pull through there instead, which didn't make sense since I'm not a CompSci student and didn't learn Git before, which was a whole process until I realized I was stupid and could just clone the repo through GitHub Desktop and merge there. I was sleep deprived don't blame me.
+Thanks to Jimmy for his patience (Even though he still hates me for this), and Arielle for helping me with understanding the programming that I was instructed to do.
+
+Moral of the story: Don't ask me to do the programming for your game. But the game is complete and works!
+
+Here is the game on itch.io: [The Fellmonger](https://sh4rpsteel.itch.io/the-fellmonger)
