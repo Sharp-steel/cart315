@@ -36,6 +36,8 @@ We started off the Jam by discussing various things that first came to mind when
 
 We then refined our ideas into a boss rush, and decided to keep or scope at a maximum of 2 bosses since we wouldn't have enough time to animate or program any more bosses.
 
+![Level Design Implementation for Game Jam](Screenshots/LevelDesignInfo.png)
+
 I worked alongside Arielle and Owen to give them instructions and feedback on the artwork, since they were responsible for environmental and character art respectively.
 I also worked alongside Hubert who was responsible for creating the soundtrack for the game, providing feedback on his sounds, mostly involving minor changes.
 
