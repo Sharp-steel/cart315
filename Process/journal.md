@@ -51,3 +51,41 @@ Thanks to Jimmy for his patience (Even though he still hates me for this), and A
 Moral of the story: Don't ask me to do the programming for your game. But the game is complete and works!
 
 Here is the game on itch.io: [The Fellmonger](https://sh4rpsteel.itch.io/the-fellmonger)
+
+## DESIGN JOURNAL - Exploration Prototype - Week 3
+
+So after the success from last week, I feel like it all coming down to Earth now. Every time I open up Unity I always end up messing something up with the program. Rider isn't much better. I wish it was easier to use like VS Code.
+
+I opened the Unity file that we did the example on from last week and started to fix the stuff such as putting the updated script on the ball. That was fine, and there were no issues.
+
+However, I wanted to take the content that was already done in class and see if I could add onto it for this prototyping journal.
+
+So I checked GitHub Desktop to see if there were any new changes made and noticed that there was new stuff to pull from the teacher's class repo, so I did that.
+
+And then merge conflicts happened and destroyed the document I was working on. (We need to stop the existence of merge conflicts in 2026) Anyways I fixed it by recloning the entire repo again. There should be a more streamlined method of fixing this but oh well.
+
+So let's actually start the prototyping now.
+
+I'm gonna be going back to the breakinOut project in Unity and seeing what I could do if I wanted to add rotating bricks.
+
+The first thing I tried was messing with some of the properties in game mode. I played around with the rotation slider to see if it worked while the game was running, but nothing happened.
+
+Looking at the script I feel like it's gotta be something to do with this area of code.
+![Original Brick Code](/Screenshots/BrickCode.png)
+
+After a Google search of what needed to be done, I realized that it needed to be put in the update function instead of start (which makes sense looking at it now), I applied this code at the bottom.
+![Initial Rotation Code](/Screenshots/InitialRotationCode.png)
+
+But nothing changed.
+
+So instead I went to ChatGPT to help debug. Normally I don't like using ChatGPT but in this case since I am less than a month into learning Unity and C# for the first time I feel as if is ok.
+
+This is the code I fixed, and I also fixed the rotation from the Y axis to the Z axis.
+![ChatGPT Debugging](/Screenshots/ChatGPTDebugging.png)
+
+So it rotates! But it rotates the whole layer but not each brick...
+![Group Brick Rotation](/Screenshots/GroupRotation.png)
+
+It's probably because the script I'm using it on is for the whole layer and doesn't target each individual brick. So I made a new script instead.
+
+Ok, so it's still doing the same thing as before, but ChatGPT won't give a solution and I don't think I can get to the solution without spending hours trying to do so. So I'm just gonna leave it here for now. It's probably a really easy fix if I knew what I was doing.
