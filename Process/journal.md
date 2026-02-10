@@ -73,7 +73,7 @@ The first thing I tried was messing with some of the properties in game mode. I 
 Looking at the script I feel like it's gotta be something to do with this area of code.
 ![Original Brick Code](/Screenshots/BrickCode.png)
 
-After a Google search of what needed to be done, I realized that it needed to be put in the update function instead of start (which makes sense looking at it now), I applied this code at the bottom.
+After a Google search of what needed to be done, I realized that it needed to be put in the update function instead of start (which makes sense), I applied this code at the bottom.
 ![Initial Rotation Code](/Screenshots/InitialRotationCode.png)
 
 But nothing changed.
@@ -87,5 +87,6 @@ So it rotates! But it rotates the whole layer but not each brick...
 ![Group Brick Rotation](/Screenshots/GroupRotation.png)
 
 It's probably because the script I'm using it on is for the whole layer and doesn't target each individual brick. So I made a new script instead.
+
 
 Ok, so it's still doing the same thing as before, but ChatGPT won't give a solution and I don't think I can get to the solution without spending hours trying to do so. So I'm just gonna leave it here for now. It's probably a really easy fix if I knew what I was doing.
