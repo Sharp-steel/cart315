@@ -73,7 +73,7 @@ The first thing I tried was messing with some of the properties in game mode. I 
 Looking at the script I feel like it's gotta be something to do with this area of code.
 ![Original Brick Code](/Screenshots/BrickCode.png)
 
-After a Google search of what needed to be done, I realized that it needed to be put in the update function instead of start (which makes sense looking at it now), I applied this code at the bottom.
+After a Google search of what needed to be done, I realized that it needed to be put in the update function instead of start (which makes sense), I applied this code at the bottom.
 ![Initial Rotation Code](/Screenshots/InitialRotationCode.png)
 
 But nothing changed.
