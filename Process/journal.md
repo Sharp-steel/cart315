@@ -89,3 +89,59 @@ So it rotates! But it rotates the whole layer but not each brick...
 It's probably because the script I'm using it on is for the whole layer and doesn't target each individual brick. So I made a new script instead.
 
 Ok, so it's still doing the same thing as before, but ChatGPT won't give a solution and I don't think I can get to the solution without spending hours trying to do so. So I'm just gonna leave it here for now. It's probably a really easy fix if I knew what I was doing.
+
+## DESIGN JOURNAL - Exploration Prototype - Week 4
+
+Ok so truth be told I am in the middle of writing a midterm right now so I don't have much time to focus on prototyping this week. So this journal will be pretty short.
+
+Despite this I'm still gonna come up with some ideas for my final project.
+
+I don't really have any ideas as I am writing this sentence but let's hope I have enough brain power left to generate something, could be a cool starting point I guess...
+
+I want to take inspiration from my favourite games, so I'm just gonna list some of them here (I might forget some):
+
+- Pokemon (Anything and everything pretty much I am an addict)
+- Xenoblade Chronicles
+- Nier Replicant (I still gotta finish the game)
+- Football Manager
+- Minecraft
+
+The common theme between these games is that they involve some form of strategy. Pokemon is turn based, Nier and Minecraft PVP both require positional strategy, Xenoblade involves managing charge gauges, and Football Manager is a pure strategy and simulation game.
+
+So I've come to the conclusion like games involving a strategy, so let's come up with ideas for one!
+
+I think the best approach is to combine turn-based with positional awareness, since they are both elements of a game that I appreciate a lot, so let's have our basis surround that idea. 
+
+I like the idea of a charge gauge system, so that could be something to add.
+
+But now I don't know what to base the game on thematically. 😭
+
+I involve too many swords within my personal aesthetic, and I'm personally starting to get tired of it, so let's opt for something else this time.
+
+Google Time!
+
+So I'm getting a lot of common fantasy tropes for theme ideas, which I've engaged in too much fantasy as of recently, which isn't a bad thing, but I'm getting tired of it.
+
+Sci-Fi falls into the same boat, no thank you.
+
+Time to consult my worst friend :)
+
+Here's a cool idea
+
+![Game Idea from ChatGPT](/Screenshots/GameIdeaGPT.png)
+
+Let's map out a turn-based skyscraper parkour game, like Mirror's Edge, but strategy :D
+
+Behold my amazing Microsoft Paint doodle!
+
+![Skyscraper Parkour Strategy](/Screenshots/SkyscraperSketch.png)
+
+So I'm starting to realize that this feels like Subway Surfers but turned based, which I didn't expect but is pretty cool nonetheless.
+
+So the premise is that you are trying to escape from an ICE agent by parkouring across buildings. You can move across 1 building per turn, and can only move in the direction of the arrows. The ICE agent then takes similar turns to yours, except has two moves per turn.
+
+The power up can be activated by a gauge system, which can be only used once per level. I didn't think of a drawback for it but oh well, maybe the ICE agent unlocks a gun or something.
+
+Your goal is to reach the golden skyscraper which unlocks the next stage of the map.
+
+This is probably a very scuffed idea that won't work but it sounds like a cool game concept anyways.
