@@ -8,7 +8,7 @@ As someone who has created a game with Bitsy before, I wasn’t going into this 
 <img width="706" height="706" alt="image" src="https://github.com/user-attachments/assets/85e4dd0a-46d8-438e-9ff8-3da5ee0966d8" />
 <img width="706" height="708" alt="image" src="https://github.com/user-attachments/assets/d01b2b33-9785-4285-82e1-4570065627ff" />
 
-## DESIGN JOURNAL - Exploration Prototype - Week 1
+## DESIGN JOURNAL - Exploration Prototype - Week 2
 
 While selecting which prototype I wanted to mess around with from Matthew's repetoire, I intially chose PurrrfectPizza, since the title sounded fun. But Unity was very mean to me since it said the files was 4 years old (outdated apparently) and wouldn't open. I'm not very happy with Unity. I'm not sure if I have to choose a game that's less than 4 years old since I only have the newest version of Unity on my computer. Since unfortunately we didn't get to finish our class exercise because, again, Unity :), I wanted to explore more the idea of collision and test out various things within Matthew's library of games (at least that's what I assumed we had to do for this journal).
 
@@ -16,7 +16,7 @@ Despite this minor setback, I would still love to test out different interaction
 
 I also forgot how to put this entry at the top of the markdown file so I'm sorry Matthew if you are reading this I promise not to do it again. :/
 
-## DESIGN JOURNAL - Exploration Prototype - Week 2
+## DESIGN JOURNAL - Exploration Prototype - Week 3
 
 I made a game! I participated in the McGill Game Jam 2026 with Arielle, Jimmy, Hubert and Owen.
 
@@ -52,7 +52,7 @@ Moral of the story: Don't ask me to do the programming for your game. But the ga
 
 Here is the game on itch.io: [The Fellmonger](https://sh4rpsteel.itch.io/the-fellmonger)
 
-## DESIGN JOURNAL - Exploration Prototype - Week 3
+## DESIGN JOURNAL - Exploration Prototype - Week 4
 
 So after the success from last week, I feel like it all coming down to Earth now. Every time I open up Unity I always end up messing something up with the program. Rider isn't much better. I wish it was easier to use like VS Code.
 
@@ -90,7 +90,7 @@ It's probably because the script I'm using it on is for the whole layer and does
 
 Ok, so it's still doing the same thing as before, but ChatGPT won't give a solution and I don't think I can get to the solution without spending hours trying to do so. So I'm just gonna leave it here for now. It's probably a really easy fix if I knew what I was doing.
 
-## DESIGN JOURNAL - Exploration Prototype - Week 4
+## DESIGN JOURNAL - Exploration Prototype - Week 5
 
 Ok so truth be told I am in the middle of writing a midterm right now so I don't have much time to focus on prototyping this week. So this journal will be pretty short.
 
@@ -145,3 +145,55 @@ The power up can be activated by a gauge system, which can be only used once per
 Your goal is to reach the golden skyscraper which unlocks the next stage of the map.
 
 This is probably a very scuffed idea that won't work but it sounds like a cool game concept anyways.
+
+## DESIGN JOURNAL - Iterative Prototype - Week 6
+
+Well, what I ended up doing last week in my last prototype ended up being exactly what we did in class this past week. So I guess I was already prepared which is a nice bonus.
+
+In class, I used the design values technique in our Game Ideation Workshop to come up with some really cool ideas for our class. For the initial game idea I had, it was a game about air mail delivery, where you would fly a plane and deliver mail by air and drop letters onto people's homes.
+
+Here are the list of words that I had wrote down:
+
+- Drones, chase, supervisors
+- Airplane, passengers, flight attendants
+- Homes, bombs, mail
+- Helicopter, Army
+- FlightRadar24, Live Tracking
+- Minimap, Pins
+- Pilot, Sky, Clouds, Weather
+- Flight Simulator, Airships
+- Paper, Packages, Cardboard
+- Guns, Military
+- Government, Air Force 1
+- Political Hierarchy
+- Postbox
+- Packaging
+- Tariffs, Sales Tax
+- Countries, Cities, Towns, Geography
+- Altitude
+- Flight, Takeoff, Landing
+- Airport, Customs, Security
+- Tickets, Gate
+- Cadets
+- Qualifications, Certificates
+- Private jets, celebrities
+- Short flights, long flights
+- Services
+- Parachuting, Sky-Diving
+- Air drop, loot
+- Fields, markers
+
+I then went into 3 different groups, one with Jimmy, one with Arielle, Nisma, Junming and Tianshun, and one with FeyFey.
+
+The best idea Jimmy and I came up with was with the 2 words Job and Services. We came up with the idea of a game that would be a job center management simulator, where you would be in charge of managing people's CVs, resumes, and finding corresponding job opportunities. We didn't get enough time to flesh out the details, but I feel like the idea has a lot of potential.
+
+The next group ended up being a five-person group. We each took 1 word from our design values and attempted to come up with a game idea using those words.
+
+These were the words we used for our best idea:
+
+- Cooking
+- Crowds
+- Survival
+- Loot
+- Cult
+
