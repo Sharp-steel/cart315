@@ -185,9 +185,9 @@ Here are the list of words that I had wrote down:
 
 I then went into 3 different groups, one with Jimmy, one with Arielle, Nisma, Junming and Tianshun, and one with FeyFey.
 
-The best idea Jimmy and I came up with was with the 2 words Job and Services. We came up with the idea of a game that would be a job center management simulator, where you would be in charge of managing people's CVs, resumes, and finding corresponding job opportunities. We didn't get enough time to flesh out the details, but I feel like the idea has a lot of potential.
+1. The best idea Jimmy and I came up with was with the 2 words Job and Services. We came up with the idea of a game that would be a job center management simulator, where you would be in charge of managing people's CVs, resumes, and finding corresponding job opportunities. We didn't get enough time to flesh out the details, but I feel like the idea has a lot of potential.
 
-The next group ended up being a five-person group. We each took 1 word from our design values and attempted to come up with a game idea using those words.
+2. The next group ended up being a five-person group. We each took 1 word from our design values and attempted to come up with a game idea using those words.
 
 These were the words we used for our best idea:
 
@@ -197,3 +197,54 @@ These were the words we used for our best idea:
 - Loot
 - Cult
 
+The game idea that we came up with was a game where you are responsible for managing and surviving in the last city in the world in a post-apocalyptic setting, and the city is filled with cults vying for power. In hindsight I think this would make for a great narrative. The gameplay concept itself still needs work but thematically this could be something I could integrate within the third game.
+
+3. My last group was with FayFay, and I feel like we came up with a really good idea together. We had the words Fields, Area and Markers.
+
+The concept for our game was a multiplayer based team arena spy/sleuthing game. There are a total of 10 players in each lobby, split into 2 different teams of 5 players each. 
+
+Each player designs their own custom arena shape before the game, and the goal of the game is to see which team has claimed the most amount of arenas/zones once all of them have been played. Each zone is claimed when a team has the most amount of materials/money/points in a given round (We didn't fully determine the win condition).
+
+The game runs on a timer system, with a full game lasting ten minutes. Each area/zone or round is played once every minute.
+
+The main crux of this however is that the game is heavily reliant on a day/night cycle system. Each team member is marked with invisible paint that is only seen at night, which in each full game amounts to about 2.5 minutes total per 10 minute games.
+
+The day night cycle per full game would look as follows:
+- 30 seconds = Night
+- 2.5 minutes = Day
+- 30 seconds = Night
+- 2.5 minutes = Day
+- 30 seconds = Night
+- 2.5 minutes = Day
+- 1 minute = Night
+
+The game heavily focuses on team-based strategy and could be an amazing concept to bring to life. The only issue is that I don't know how to make a multiplayer based game in Unity and I feel like the scope and time it would take to make would be too much.
+
+I feel like it could be good if we could incorporate the whole culty-apocalypse theme I had with Junming's group, it seems like it would fit well within this context.
+
+Here's a quick role prototype to better understand my vision:
+
+![Customize Arena Design Screen](/Screenshots/ArenaDesign.png)
+
+![Arena Display Screen](/Screenshots/ArenaDisplay.png)
+
+The first screen is when you enter a lobby for the first time. Once the game starts, you are presented with the screen that makes you design your custom arena.
+
+The interface buttons are as follows:
+
+- The center canvas is where you draw your map
+- The Gold Circle is selected where you place the win condition in the canvas (In this case I put points but might be changed to something else in the future)
+- The Two Hexagons (Green & Purple) is where you place the initial spawning position of each team in the canvas
+- The Pencil is to select your drawing tool to draw your map inside the canvas
+- The Red X is to clear the canvas
+- The Green Checkmark is to confirm your final design
+
+Once the user has clicked on the green checkmark, the user is moved to a waiting screen display with the other player's designs hidden behind a grey screen, except for your own obviously.
+
+Once everyone's design is finalized, the game starts by selecting a random panel from the ten different ones displayed and then starts the match.
+
+![Arena Selected Screen](/Screenshots/ArenaSelected.png)
+
+The teams are then also randomized and the game starts.
+
+I really like this idea like I mentioned earlier, and this I feel is a great starting point for the game. Again, I have no idea if I can implement multiplayer functionality for this game but it seems like a cool idea nonetheless.
