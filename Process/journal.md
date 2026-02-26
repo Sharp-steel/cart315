@@ -222,7 +222,7 @@ The game heavily focuses on team-based strategy and could be an amazing concept 
 
 I feel like it could be good if we could incorporate the whole culty-apocalypse theme I had with Junming's group, it seems like it would fit well within this context.
 
-Here's a quick role prototype to better understand my vision:
+Here's a quick look-feel prototype to better understand my vision:
 
 ![Customize Arena Design Screen](/Screenshots/ArenaDesign.png)
 
