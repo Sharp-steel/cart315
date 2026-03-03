@@ -248,3 +248,53 @@ Once everyone's design is finalized, the game starts by selecting a random panel
 The teams are then also randomized and the game starts.
 
 I really like this idea like I mentioned earlier, and this I feel is a great starting point for the game. Again, I have no idea if I can implement multiplayer functionality for this game but it seems like a cool idea nonetheless.
+
+## Game Analysis
+
+![Metroid Prime 4 Cover Art](/Screenshots/MetroidPrime4Cover.png)
+
+Over the past few days, I've finally got around to starting one of the games currently in my backlog: Metroid Prime 4: Beyond.
+
+Here are some of my first impressions with the game so far after defeating the first two bosses, including what I like, what I dislike, and what I borrow from this game for my future project.
+
+# What I Like
+
+1. Mechanics
+
+I've gotta say, I'm having a lot of fun with the mechanics in this game. I'm especially impressed with the physics of the morph ball in relation to the surrounding environment. Whenever Samus turns into the morph ball and starts moving and rolling around, the gravity matches the environment. For example, when you are rolling down a hill, the ball rolls faster. And when you are going uphill, the ball moves slower. Whenever the ball rolls over a branch or an object, it gives a little bounce to it, which is something I find that often gets overlooked in similar games. Movement is never at a constant speed, unless you are on a flat surface, which forces the player to come up with different strategies.
+
+![Samus Morph Ball](/Screenshots/MorphBall.jpg)
+
+2. Scanning
+
+A feature that tickles my interest a lot is the scanning feature. I'm a huge completionist with video games so I like having a feature that keeps me hooked in and playing more of. In Metroid Prime 4, the scanning feature enables you to get a little bit more detail about the world that you are inhibiting for the first time. You can scan virtually everything in the world, from people to plants to statues to get a better sense of what to do and how to progress alongside valuable lore and information. There is a percentage meter in the menu which enables the player to scan as much as possible in order to 100% the game, which is a feature that I always enjoy in any video game. I found myself doing a lot more scanning then trying to progress the game forward at first, since I wanted to attempt to complete as much as I could before moving forward.
+
+![Scanning Mode](/Screenshots/Scanning.jpg)
+
+![100% Scanning Completion](/Screenshots/Menu.jpg)
+
+3. Interface
+
+Another staple of Metroid that I really enjoy is the UI. When you are in first person, the UI is really well executed. The helmet visor HUD is really simple, but a clean design at the same time. It has all the information needed without being too cluttered. At the top is your health bar, the top right has your minimap, the top left has the surrounding enemies within your radius, the bottom left has your different weapon loadouts and the bottom right has your ammo count for missiles and other weapons. Overall this is a very well polished interface.
+
+![First Person UI](/Screenshots/MetroidUI.jpg)
+
+# What I Don't Like
+
+1. Lack of Player Communication in Certain Instances
+
+One of the boss fights in this game really urked me the wrong way. The Carvex fight (the second boss) was a pretty simple fight in hindsight, but the way in which you had to beat it was very poorly communicated to the player. In this fight, the Carvex possess a shell that it protects itself with and grows tentacle-like appendages to attack Samus. You have to shoot them down simultaneously in order to open its shell. However, the mechanic in which you defeat this boss was presented as an out of battle mechanic. Therefore, I was stuck for at least 15 minutes in the fight just doing the same thing over and over again without having any idea why I wasn't doing anything or making any progress. I had to look up the way in which you defeat the boss because I was making no progress, which made the game a little less enjoyable since I wanted to do it all myself.
+
+![Carvex Boss](/Screenshots/Carvex.jpg)
+
+2. Lack of Contact Particles
+
+This is something pretty minor, but it can make a huge difference and it's something that I've learned about game development pretty recently. When playing the game, you have to shoot open doors in order to pass through them to progress. When you shoot the door though, it doesn't have a particle effect upon contact to let the player know that they are going in the right direction. Instead, the shot connects and the light on the door dims down and unlocks, which is pretty lame in my opinion. I feel that they could've had a nice swirl effect or something that would've made the shot look cooler.
+
+# Ideas to Borrow
+
+I think the main takeaway from this is that everything should be communicated to the player directly, such as mechanics, boss information or whatever it may be, the player must know everything there is about the game. Therefore I will make sure that in my game, all information is directly relayed to the player.
+
+Another thing I want to implement within my game is a good interface, that is clean but simple and easy to understand.
+
+One last thing to add would be simple effects and mechanics that make the game more enjoyable as a whole. Whether it be an extra particle effect to add a bit of spice or a mechanic that is somewhat realistic I think that it would be appreciated by a lot of players and adds an extra layer to the game.
