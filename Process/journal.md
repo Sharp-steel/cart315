@@ -201,7 +201,7 @@ The game idea that we came up with was a game where you are responsible for mana
 
 3. My last group was with FayFay, and I feel like we came up with a really good idea together. We had the words Fields, Area and Markers.
 
-The concept for our game was a multiplayer based team arena spy/sleuthing game. There are a total of 10 players in each lobby, split into 2 different teams of 5 players each. 
+The concept for our game was a multiplayer based team arena game. There are a total of 10 players in each lobby, split into 2 different teams of 5 players each. 
 
 Each player designs their own custom arena shape before the game, and the goal of the game is to see which team has claimed the most amount of arenas/zones once all of them have been played. Each zone is claimed when a team has the most amount of materials/money/points in a given round (We didn't fully determine the win condition).
 
@@ -298,3 +298,18 @@ I think the main takeaway from this is that everything should be communicated to
 Another thing I want to implement within my game is a good interface, that is clean but simple and easy to understand.
 
 One last thing to add would be simple effects and mechanics that make the game more enjoyable as a whole. Whether it be an extra particle effect to add a bit of spice or a mechanic that is somewhat realistic I think that it would be appreciated by a lot of players and adds an extra layer to the game.
+
+## DESIGN JOURNAL - Iterative Prototype - Week 7
+
+In my last journal log, I came up with the starting point of a look/feel and role prototype. I got a little bit of feedback and was told to develop my role prototype a bit further, so that will be the goal outlined here.
+
+To recap, my game is going to be a team-based 5v5 arena game (For the purposes of the final prototype and time it will be a singleplayer game), where the arenas are created and drawn out by the player. The team that claims the most amount of arenas wins.
+
+The goal for this week's journal is to outline my arena win condition (how the teams claim arenas), and to further develop an overall theme for the game, amongst other loose ends to tidy up. This should make for a relatively structured role prototype of what the full process of the player playing the game should experience from first loading the game to finishing the game.
+
+I think the best way to start this is through a classic MS Paint low-fidelity prototype (A staple of mine at this point).
+
+I found a pretty good visual to base my role prototype off of, so I think I'll do something like this:
+
+![Sticky Notes Role Prototype](/Screenshots/RolePrototypeExample.png)
+
