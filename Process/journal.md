@@ -228,7 +228,7 @@ Here's a quick look-feel/role prototype to better understand my vision:
 
 ![Arena Display Screen](/Screenshots/ArenaDisplay.png)
 
-The first screen is when you enter a lobby for the first time. Once the game starts, you are presented with the screen that makes you design your custom arena.
+The first screen is when you enter a game for the first time. Once the game starts, you are presented with the screen that makes you design your custom arena.
 
 The interface buttons are as follows:
 
@@ -305,7 +305,7 @@ In my last journal log, I came up with the starting point of a look/feel and rol
 
 To recap, my game is going to be a team-based 5v5 arena game (For the purposes of the final prototype and time it will be a singleplayer game), where the arenas are created and drawn out by the player. The team that claims the most amount of arenas wins.
 
-The goal for this week's journal is to outline my arena win condition (how the teams claim arenas), and to further develop an overall theme for the game, amongst other loose ends to tidy up. This should make for a relatively structured role prototype of what the full process of the player playing the game should experience from first loading the game to finishing the game.
+The goal for this week's journal is to outline the process of what a player experiences from start to finish amongst other loose ends to tidy up.
 
 I think the best way to start this is through a classic MS Paint low-fidelity prototype (A staple of mine at this point).
 
@@ -313,3 +313,66 @@ I found a pretty good visual to base my role prototype off of, so I think I'll d
 
 ![Sticky Notes Role Prototype](/Screenshots/RolePrototypeExample.png)
 
+Of course the first step is when the player gets the game and launches it for the first time.
+
+![Role Prototype Part 1](/Screenshots/Role1.png)
+
+Next when the player is on the title screen, the player is presented with three options:
+
+1. Enter the lobby straight away
+2. Customize control scheme
+3. Change settings 
+
+The player can choose to enter the game without having to look at the control scheme or settings, but it's at their own risk.
+
+Therefore, the option to change the control scheme and the ability to modify game settings will be heavily highlighted on the title screen. A bit of a boring task at first but its going to be integral for later on.
+
+The title screen will enhance the type of game that it will be, featuring elements that present the type of game that this game will be (Arena based team game)
+
+![Role Prototype Part 2](/Screenshots/Role2.png)
+
+The lobby features a training area, where the player is able to practice game controls and mechanics. It will also feature a billboard or signage of some sort in front of the player when they spawn in that emphasizes the rules of the game, what each interface element represents, etc.
+
+The lobby will also have a win display that shows either the amount of wins a player has, or a W/L ratio. It will of course also possess the ability to leave the game or go back to the title screen to fix controls or change settings.
+
+The ability to queue into a match is of course the most important aspect of the lobby (Of course I forgot to add this to the prototype after finishing the sketch but oh well), there will be a button or place to interact with to queue into a game.
+
+![Role Prototype Part 3](/Screenshots/Role3.png)
+
+After the player successfully queues up and enters a match, the arena customization interface pops up, which was highlighted in my last iteration prototype. The player has the ability to of course draw their arena, place markers for the teams and win condition, and to clear the board and confirm their final design. They then proceed to the waiting room.
+
+![Role Prototype Part 4](/Screenshots/Role4.png)
+
+The waiting room as also outlined in the previous week's prototype has all player's (or NPCs) designs, each hidden behind a grey screen. The wheel then selects the panels in random order. The first one selected is the first round, last is the last round. It then randomly splits the teams without the player knowing who is on what team and starts the match on the first arena.
+
+![Role Prototype Part 5](/Screenshots/Role5.png)
+
+When the match starts, the player spawn with the rest of his teammates. Based on how the day/night cycle works in the game, the player is able to identify his teammates with whom they spawn in with, but can only see their team markers for the first 30 seconds. This varies by round, and the player won't always be able to see the coloured markers at the start of a round.
+
+The win con location is clearly highlighted to the player on the interface, showing them its approximate location.
+
+The interface is also vastly different from day to night. At night colours are vibrant while in the day, everything is grey and bleak, making it impossible to identify teammates.
+
+If you are killed you will respawn at the same point you started the round at.
+
+Once the round is over, the winner of said round is projected to the player, and then the player gets teleported to the next arena, and this process gets repeated until the end of the game.
+
+![Role Prototype Part 6](/Screenshots/Role6.png)
+
+Much of the players' experience after starting the game and finishing the first round will be all about strategy. The game will progress as something that forces players to adjust their game plan, and emerging strategies and metagames will rise from this. Based on the constant shifting environment of the arenas, 1 player will always have an advantage over the others due to the fact that they know their own environment that they created.
+
+Betrayal and surprise is inbound, considering if you accidentally kill the wrong player, then the game balance shifts dramatically.
+
+These situations cause further desperate adjustments to be made as well as last minute plans and extreme urgency. Players will have to be very vigilant about their decisions and game plans.
+
+![Role Prototype Part 7](/Screenshots/Role7.png)
+
+Once the game is ended, and all rounds are complete or a team reaches 6 wins, all designed arenas are shown on an end game screen, similar to the waiting room screen but all panels are now revealed.
+
+The winner is then determined, and accompanying stats are showcased, such as K/D ratio, number of kills, deaths, and the most amount of points/material/money/resources claimed from the win condition.
+
+Then the player clicks a button or gets automatically sent back to the lobby, where they can choose to play another round, or leave, completing the gameplay loop.
+
+![Role Prototype Part 8](/Screenshots/Role8.png) 
+
+I think I accomplished my goal for the week, and have a solid basis of which aspects to build and implement my game around. Next up is the implementation prototype!
