@@ -403,9 +403,16 @@ As for now, I will focus on implementing basic player movement.
 
 # Implementation
 
-The goal is simply to get the player moving, and to try and figure out mouse-based rotation.
+Since I don't have a lot of time this week (it's been pretty hectic), the goal is simply to get the player moving, and to try and figure out mouse-based rotation.
 
 Ok, so I started off my Unity project with just adding a simple circle to represent the player and some simple walls.
 
 ![Starting off the Project](/Screenshots/StartOfProject.png)
 
+So by watching this [YT Tutorial](https://www.youtube.com/watch?v=0-c3ErDzrh8) I've got a head start on the player movement, but the Unity Input Manager doesn't like me...
+
+![Input Manager Error](/Screenshots/InputManagerError.png)
+
+Thank you Unity for making me jump through hoops every time I boot up the program lol.
+
+Sadly I don't have enough time left to work on a fix before I have to submit this journal, but I'll continue the process through in next week's journal!
