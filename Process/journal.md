@@ -376,3 +376,36 @@ Then the player clicks a button or gets automatically sent back to the lobby, wh
 ![Role Prototype Part 8](/Screenshots/Role8.png) 
 
 I think I accomplished my goal for the week, and have a solid basis of which aspects to build and implement my game around. Next up is the implementation prototype!
+
+## DESIGN JOURNAL - Iterative Prototype - Week 8
+
+In the last class I showed my ideas to Arielle and Nisma. 
+
+I got some really good inspiration to carry forward with my game idea. I finally decided to make the game 2D, and both Ari and Nisma agreed. Doing a 3D game would make transposing the arena designs from canvas sketch to the actual arena infinitely more difficult, as there would be a LOT of math and extra coding involved to map out a 2D interface to 3D that I don't need to kill myself over.
+
+I also decided to not pursue the multiplayer element since it would take the longest amount of time to figure out. I'll be sticking to NPCs for the sake of this prototype concept.
+
+I was also asked about player movement and how it would work, so I came up with the idea of implementing mouse-based rotation for aim. I'm still on the fence about going for either cardinal direction movement (WASD) or movement based on the mouse directions. I might start off with cardinal direction and if it seems too boring I'll pivot over to mouse-based.
+
+Arielle said that the mouse based movement reminded her of online tank-based games, which then reminded me of the .io games, like Agar.io, Slither.io and Diep.io. Because of this revelation, now I actually have a visual idea of what I want my game to become similar to, and now I have a title for my game! (It's makeshift for now). But without further ado, the name of my game will be...
+
+**ARENA.IO!!!!**
+
+I know. Very creative. And hard to say in hindsight.
+
+During this review session, I was also asked about how I would code NPC behaviour and filtering out unsafe for work arena designs. For the former, I said that I would implement an ally detection system, whereby during nighttime, allies will never try to kill their own teammates, but during daytime, they will have a 3/5 or 4/5 chance to attempt to shoot their own teammate. For the latter, I was recommended by Nisma (I think I don't remember who specifically it was) to add a requirement system/template so that it would filter out all of the negative content.
+
+Nisma asked about how the ammo would be used, to which I said that ammo would be infinite and the bullets would disappear after a while.
+
+A maze idea that was brought up was cool as well, maybe I'll implement that at some time.
+
+As for now, I will focus on implementing basic player movement.
+
+# Implementation
+
+The goal is simply to get the player moving, and to try and figure out mouse-based rotation.
+
+Ok, so I started off my Unity project with just adding a simple circle to represent the player and some simple walls.
+
+![Starting off the Project](/Screenshots/StartOfProject.png)
+
