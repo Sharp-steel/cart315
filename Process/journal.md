@@ -416,3 +416,13 @@ So by watching this [YT Tutorial](https://www.youtube.com/watch?v=0-c3ErDzrh8) I
 Thank you Unity for making me jump through hoops every time I boot up the program lol.
 
 Sadly I don't have enough time left to work on a fix before I have to submit this journal, but I'll continue the process through in next week's journal!
+
+## DESIGN JOURNAL - Iterative Prototype - Week 9
+
+So I figured out the issue was that I had to switch the Active Input Handling in my document to include both the old and new Unity Input Managers.
+
+Now the movement works!
+
+![Player Movement is Working!](/Screenshots/)
+
+[![Image from Gyazo](https://i.gyazo.com/d33fc9faf847ceeda0540f07e66aa867.gif)](https://gyazo.com/d33fc9faf847ceeda0540f07e66aa867)
