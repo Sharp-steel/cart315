@@ -423,6 +423,6 @@ So I figured out the issue was that I had to switch the Active Input Handling in
 
 Now the movement works!
 
-![Player Movement is Working!](/Screenshots/)
+![Player Movement is Working!](/Screenshots/PlayerMovement.gif)
 
-[![Image from Gyazo](https://i.gyazo.com/d33fc9faf847ceeda0540f07e66aa867.gif)](https://gyazo.com/d33fc9faf847ceeda0540f07e66aa867)
+[![Player Rotation With Mouse](https://i.gyazo.com/d33fc9faf847ceeda0540f07e66aa867.gif)](https://gyazo.com/d33fc9faf847ceeda0540f07e66aa867)
