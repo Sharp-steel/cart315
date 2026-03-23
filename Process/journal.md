@@ -401,7 +401,7 @@ A maze idea that was brought up was cool as well, maybe I'll implement that at s
 
 As for now, I will focus on implementing basic player movement.
 
-# Implementation
+### Implementation
 
 Since I don't have a lot of time this week (it's been pretty hectic), the goal is simply to get the player moving, and to try and figure out mouse-based rotation.
 
@@ -425,4 +425,17 @@ Now the movement works!
 
 ![Player Movement is Working!](/Screenshots/PlayerMovement.gif)
 
+Add I also added mouse rotation, which will be useful when incorporating the shooting mechanics. It looks really cool!
+
 [![Player Rotation With Mouse](https://i.gyazo.com/d33fc9faf847ceeda0540f07e66aa867.gif)](https://gyazo.com/d33fc9faf847ceeda0540f07e66aa867)
+
+I also found this really promising YouTube tutorial playlist that basically encompasses how the game is going to function at a base level, so I will start following it to encorporate some of the code.
+
+[Playlist](https://www.youtube.com/playlist?list=PLgOEwFbvGm5qgkKCL-NRoKUJMgewq4p52)
+
+### After a few days
+
+So I've been a bit under the weather this weekend, but I have enough time to get some more of the implementation done, so let's do it.
+
+The first thing that I wanted to tackle was the camera, rather than being centralized to the environment itself, I wanted to make the camera move alongside the player, so be using the tutorial above, I managed to do so!
+
