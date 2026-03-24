@@ -437,5 +437,22 @@ I also found this really promising YouTube tutorial playlist that basically enco
 
 So I've been a bit under the weather this weekend, but I have enough time to get some more of the implementation done, so let's do it.
 
-The first thing that I wanted to tackle was the camera, rather than being centralized to the environment itself, I wanted to make the camera move alongside the player, so be using the tutorial above, I managed to do so!
+The first thing that I wanted to tackle was the camera, rather than being centralized to the environment itself, I wanted to make the camera move alongside the player, so by using the tutorial above, I managed to do so!
 
+[![Camera Tracking](https://i.gyazo.com/dcc0afd9ebe16f29aee77a0d3f408cbb.gif)](https://gyazo.com/dcc0afd9ebe16f29aee77a0d3f408cbb)
+
+If I can also get the shooting down, that'll be the next step and probably final step to accomplish for this week.
+
+So I've got the console to register the shooting, pretty nifty.
+
+![Console Registers Shooting](/Screenshots/ShotConsoleTest.gif)
+
+And now I have the bullets firing! Except they're going in the wrong direction lol
+
+![Bullets firing in wrong direction](/Screenshots/BulletsWrongDirection.gif)
+
+So it was because I put -transform and forgot to remove the minus, oops. It works now though!
+
+I glad to have accomplished my goals for the week. I've got player movement finished, mouse rotation, camera tracking and shooting.
+
+Next week I'll look to tackle bullets disappearing after a while and disappearing after contact with walls as well as other players, plus adding those NPC players in the first place.
