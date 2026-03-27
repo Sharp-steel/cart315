@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    [SerializeField] private float cooldown = 0.25f;
+    [SerializeField] private float cooldown = 0.5f;
     private float cooldownTimer;
     
     [SerializeField] private GameObject bulletPrefab;

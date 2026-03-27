@@ -456,3 +456,13 @@ So it was because I put -transform and forgot to remove the minus, oops. It work
 I glad to have accomplished my goals for the week. I've got player movement finished, mouse rotation, camera tracking and shooting.
 
 Next week I'll look to tackle bullets disappearing after a while and disappearing after contact with walls as well as other players, plus adding those NPC players in the first place.
+
+## DESIGN JOURNAL - Iterative Prototype - Week 10
+
+So I managed to make the bullet disappear after a second or two, which was really easy to fix considering I just had to move a slider (lol), and the wall contact works, but it wasn't working for a while, until I realized that I had to untick 1 checkbox... nice job Unity :)
+
+With that the player and bullets are done!
+
+If I get all of the core features done, then I will make a particle effect for bullet contact.
+
+The next core feature is to create NPC's, determining whether one of them is a teammate or enemy, and programming their AI behaviour.

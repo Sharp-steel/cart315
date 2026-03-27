@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -17,7 +18,7 @@ public class projectile : MonoBehaviour
     public void ShootBullet(Transform shootPoint)
     {
         activeTimer = 0;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         transform.position = shootPoint.position;
         transform.rotation = shootPoint.rotation;
         gameObject.SetActive(true);
@@ -28,6 +29,11 @@ public class projectile : MonoBehaviour
     {
         activeTimer += Time.deltaTime;
         if (activeTimer >= lifetime)
-            gameObject.SetActive(false);
+            Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
     }
 }

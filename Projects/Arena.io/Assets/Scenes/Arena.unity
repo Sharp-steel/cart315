@@ -283,7 +283,7 @@ GameObject:
   m_Layer: 0
   m_Name: Firepoint
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -296,7 +296,7 @@ Transform:
   m_GameObject: {fileID: 581519268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
+  m_LocalPosition: {x: -0.008, y: 0.743, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1851476c72a550f408c2bd5dbd3d2c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunController
-  cooldown: 0
+  cooldown: 0.25
   bulletPrefab: {fileID: 5270800659454159178, guid: 76d7fdedf270fff4b870b5b5507b8b14, type: 3}
   firepoint: {fileID: 581519269}
 --- !u!1001 &8128091861012880151
@@ -539,6 +539,18 @@ PrefabInstance:
     - target: {fileID: 681494335112735022, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
       propertyPath: m_Name
       value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445387922938968124, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_Color.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473810499573492299, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_Color.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252912992180140986, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2795715433578624434, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
       propertyPath: m_LocalPosition.x
@@ -579,6 +591,46 @@ PrefabInstance:
     - target: {fileID: 2795715433578624434, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782801761818272470, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10.187532
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782801761818272470, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782801761818272470, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.5946
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043355194853939497, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_Color.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125028396832523471, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10.186038
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125028396832523471, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.5925
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518990828744783197, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736589362487522000, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965685044010182248, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163088652906095006, guid: f0e72881ac8bc7f4590ec698b5008000, type: 3}
+      propertyPath: m_Color.a
+      value: 0.14901961
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
