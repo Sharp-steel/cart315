@@ -431,7 +431,7 @@ Add I also added mouse rotation, which will be useful when incorporating the sho
 
 I also found this really promising YouTube tutorial playlist that basically encompasses how the game is going to function at a base level, so I will start following it to encorporate some of the code.
 
-[Playlist](https://www.youtube.com/playlist?list=PLgOEwFbvGm5qgkKCL-NRoKUJMgewq4p52)
+[Link to Playlist](https://www.youtube.com/playlist?list=PLgOEwFbvGm5qgkKCL-NRoKUJMgewq4p52)
 
 ### After a few days
 
@@ -466,3 +466,41 @@ With that the player and bullets are done!
 If I get all of the core features done, then I will make a particle effect for bullet contact.
 
 The next core feature is to create NPC's, determining whether one of them is a teammate or enemy, and programming their AI behaviour.
+
+So I've created a basic teammate and enemy NPC. The purple is the enemy and the green is your teammate.
+
+![Teammate and Enemy NPCs](/Screenshots/TeammateEnemyNPCs.png)
+
+The good news is that I've got the enemy tracking the player's location and is following the player at a set distance!
+
+Here is the guide I used: [Link to Basic Enemy Movement Tutorial](https://www.youtube.com/watch?v=ptLg-J67vIU&list=PLSR2vNOypvs72jRSvOEWv448Tle9nDw1Z&index=4)
+
+But then the enemy doesn't want to let go of me after a while...
+
+[![Enemy Tracking Player](https://i.gyazo.com/739bdbea1990569091c3b8408b87219c.gif)](https://gyazo.com/739bdbea1990569091c3b8408b87219c)
+
+You can also see that I haven't programmed the rotation yet (not sure how to do it but should be similar to the player). I want it to also start firing bullets when it gets in range of the player.
+
+So instead of copying the guide before, I found out about a Unity Package called A* Pathfinding. The pathfinding code is already set up for you, where all you have to do is switch a couple of parameters. This makes my life so easy! And you can further customize as well if you need to.
+
+All I did was flick a couple of buttons and sliders and now this is the result!
+
+[![Image from Gyazo](https://i.gyazo.com/afee3200972497ee60d74c360d47b4b1.gif)](https://gyazo.com/afee3200972497ee60d74c360d47b4b1)
+
+Once I add in the win condition (which I think I've finally decided on it being a flag, and for every 5 seconds that pass while you are on the flag you get a point), then I will be able to tweak the pathfinding so that the NPC's AI is able to track the flag and move towards it. But if another player/enemy is on the way, then they will start pathfinding towards it.
+
+I should probably start with the Day/Night cycle next. Once I do enough research and figure out how it works, I should be good to go.
+
+Also while I'm at it here's my current to-do list:
+- Tweak NPC teammates and their behaviour after adding flag
+- Tweak NPC enemies and their behaviour after adding flag
+- Day/Night system, carry across different scenes
+- Add spawn/respawn points for NPC teammates, enemies and player
+- Add flag, programming enemy/teammate movement towards it
+- Points system, maybe integrate with day/night cycle?
+- Starting Menu
+- End Game Menu
+- Adjust walls per arena (Should be quick and fun)
+- Change game background (Grab a 2D tileset from online somewhere)
+- Make simple particle effect for bullet collision (Not a must, could scrap if need be)
+- Player flashing when hit (Again could be really helpful but I'll do this at the end)

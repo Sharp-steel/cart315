@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6815147551587322974}
   - component: {fileID: 7842974266871943651}
-  - component: {fileID: 5414113339415863523}
   - component: {fileID: 8336119875505073859}
   - component: {fileID: 7901902359656699450}
+  - component: {fileID: 5414113339415863523}
+  - component: {fileID: -6396136414387065870}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -94,20 +95,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5414113339415863523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5270800659454159178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9433a58e339efdb4b92340c60b3b2148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::projectile
-  speed: 11
-  lifetime: 1
 --- !u!58 &8336119875505073859
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +158,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5414113339415863523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5270800659454159178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9433a58e339efdb4b92340c60b3b2148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::projectile
+  speed: 11
+  lifetime: 1
+--- !u!114 &-6396136414387065870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5270800659454159178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7488e90b6dd8e45a5f35071408772b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::bulletDamage
+  damage: 1

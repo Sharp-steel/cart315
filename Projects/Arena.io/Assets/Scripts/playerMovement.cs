@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public class player : MonoBehaviour
-
+public class playerMovement : MonoBehaviour
 {
     public Rigidbody2D body;
     public float speed;
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
