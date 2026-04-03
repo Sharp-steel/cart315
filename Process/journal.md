@@ -210,12 +210,12 @@ The game runs on a timer system, with a full game lasting ten minutes. Each area
 The main crux of this however is that the game is heavily reliant on a day/night cycle system. Each team member is marked with invisible paint that is only seen at night, which in each full game amounts to about 2.5 minutes total per 10 minute games.
 
 The day night cycle per full game would look as follows:
-- 30 seconds = Night
-- 2.5 minutes = Day
-- 30 seconds = Night
-- 2.5 minutes = Day
-- 30 seconds = Night
-- 2.5 minutes = Day
+- 30 seconds = Night to Day
+- 2.5 minutes = Day to Night
+- 30 seconds = Night to Day
+- 2.5 minutes = Day to Night
+- 30 seconds = Night to Day
+- 2.5 minutes = Day to Night
 - 1 minute = Night
 
 The game heavily focuses on team-based strategy and could be an amazing concept to bring to life. The only issue is that I don't know how to make a multiplayer based game in Unity and I feel like the scope and time it would take to make would be too much.
@@ -485,7 +485,7 @@ So instead of copying the guide before, I found out about a Unity Package called
 
 All I did was flick a couple of buttons and sliders and now this is the result!
 
-[![Image from Gyazo](https://i.gyazo.com/afee3200972497ee60d74c360d47b4b1.gif)](https://gyazo.com/afee3200972497ee60d74c360d47b4b1)
+[![Tracking Again](https://i.gyazo.com/afee3200972497ee60d74c360d47b4b1.gif)](https://gyazo.com/afee3200972497ee60d74c360d47b4b1)
 
 Once I add in the win condition (which I think I've finally decided on it being a flag, and for every 5 seconds that pass while you are on the flag you get a point), then I will be able to tweak the pathfinding so that the NPC's AI is able to track the flag and move towards it. But if another player/enemy is on the way, then they will start pathfinding towards it.
 
@@ -504,3 +504,33 @@ Also while I'm at it here's my current to-do list:
 - Change game background (Grab a 2D tileset from online somewhere)
 - Make simple particle effect for bullet collision (Not a must, could scrap if need be)
 - Player flashing when hit (Again could be really helpful but I'll do this at the end)
+
+## DESIGN JOURNAL - Final Iterative Prototype - Week 11
+
+So I decided to prioritize the day/night cycle system. I found a good tutorial that helped me out a lot with how it worked: [Day/Night Cycle tutorial](https://www.youtube.com/watch?v=ihurRMKz2es)
+
+This tutorial provided a pastebin link for the code, which made my life slightly easier. [Pastebin Code Used](https://pastebin.com/6Yfhy50x)
+
+However, the really hard part was that I had to constantly adjust the math to not actually base it on a real time 24 hr clock like in the tutorial. So I spent a couple of hours trying to figure that out.
+
+But here is the result:
+
+[![Day/Night Cycle in Motion](https://i.gyazo.com/6a8009a2c2b972dc62dbb60897888889.gif)](https://gyazo.com/6a8009a2c2b972dc62dbb60897888889)
+
+I'll still have to add a reset timer function and to program the NPC behaviour based on the clock, and when to freeze the timer when moving to a different map. 
+
+I think I'm going to focus on some smaller stuff for now to get things done more quickly, such as setting up the map boundaries. Could save me time to finish the basics and focus on more complex things a bit later on. Basically anything that doesn't involve code.
+
+So I've set up some basic map boundaries (pretty nifty)
+
+![Map Boundaries](/Screenshots/MapBoundaries.png)
+
+Now my to-do list is getting shorter!
+
+- Tweak NPC teammates & enemies & their behaviour based on clock and win condition location
+- Freeze and reset timer when 10 minutes is reached
+- Add spawn points for NPC team and player
+- Respawn Capability
+- Add win condition, programming enemy/teammate movement towards it
+- Points system UI
+- Player & NPC flashing when get hit
