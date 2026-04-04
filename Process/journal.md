@@ -534,3 +534,18 @@ Now my to-do list is getting shorter!
 - Add win condition, programming enemy/teammate movement towards it
 - Points system UI
 - Player & NPC flashing when get hit
+
+I briefly added a triangle sprite to signify the win condition location.
+
+![Win Condition Location](/Screenshots/WinCondition.png)
+
+Now here is the updated to-do list as a result:
+
+- Tweak NPC teammates & enemies & their behaviour/movement based on day/night cycle and win condition location
+- Freeze and reset timer when 10 minutes is reached
+- Add spawn points for NPC team and players, warp to arena after certain amount of time is passed
+- Respawn Capability
+- Player flashing when get hit
+- Points System UI
+
+Now the next step is to reset and freeze the timer when 10 minutes is reached.
