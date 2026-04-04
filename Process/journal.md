@@ -549,3 +549,39 @@ Now here is the updated to-do list as a result:
 - Points System UI
 
 Now the next step is to reset and freeze the timer when 10 minutes is reached.
+
+So I managed to do that and more, thanks to a little honest help from ChatGPT, I was able to discover what Color.Lerp was to be able to switch colours procedurally when the clock changes to day and night. Oh and also the timer resets once it hits ten minutes.
+
+[![Colour Change Day to Night](https://i.gyazo.com/20002e025de3de905cd02b49dde9dc7a.gif)](https://gyazo.com/20002e025de3de905cd02b49dde9dc7a)
+
+Here is another update to the list:
+
+- Tweak NPC teammates & enemies & their behaviour/movement based on day/night cycle and win condition location
+- Switch Scenes when 10 minutes is reached
+- Add spawn points for NPC team and players, warp to arena after certain amount of time is passed
+- Respawn Capability
+- Player flashing when get hit
+- Points System UI
+
+I accomplished another step of the project, which is the players switching arenas after a certain amount of time has passed.
+
+I decided to keep everything in one scene since it would be easier to manage. Then once the game is done to scene will eventually switch to another scene which is just UI elements displaying who won and the total score.
+
+[![Teleport to Arena](https://i.gyazo.com/1d301b546175248a72f81aadd6dd90f0.gif)](https://gyazo.com/1d301b546175248a72f81aadd6dd90f0)
+
+Another update to the list:
+
+- Tweak NPC teammates/enemies & their behaviour/movement based on day/night cycle and win condition location
+- NPCs ability to shoot
+- Switch Scenes when 10 minutes is reached
+- Respawn Capability
+- Player flashing when get hit
+- Points System UI
+
+It took A LOT of debugging, but I finally got it to switch the scene to the Game Over Scene. All because I had a bool in the Day Night Cycle script set to private instead of public (Ugh...)
+
+- Tweak NPC teammates/enemies & their behaviour/movement based on day/night cycle and win condition location
+- NPCs ability to shoot
+- Respawn Capability
+- Player flashing when get hit
+- Points System UI in Game, and Game Over Display Screen
