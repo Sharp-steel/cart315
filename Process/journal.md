@@ -585,3 +585,36 @@ It took A LOT of debugging, but I finally got it to switch the scene to the Game
 - Respawn Capability
 - Player flashing when get hit
 - Points System UI in Game, and Game Over Display Screen
+
+Another update, and this time the respawn mechanics are done!
+
+Lowkey couldn't have done this without the help of ChatGPT, so yeah shoutouts to ChatGPT I guess? I don't like using it but it's a really helpful tool for whenever I get really stuck on something and I'm on a time crunch.
+
+[![Dying and Respawning](https://i.gyazo.com/1d7dc08446ca70fcdb1e552cabbcd7a7.gif)](https://gyazo.com/1d7dc08446ca70fcdb1e552cabbcd7a7)
+
+So now the list is getting super short!
+
+- Tweak NPC teammates/enemies & their behaviour/movement based on day/night cycle and flag location
+- Gain points by hovering over flag
+- NPCs ability to shoot
+- Player flashing when get hit
+- Points System UI in Game, and Game Over Display Screen
+
+So I got a better understanding of how NPCs can locate and fire bullets towards a specific target thanks to this tutorial: [NPC targeting tutorial](https://www.youtube.com/watch?v=--u20SaCCow&t=173s)
+
+Now I had to ask ChatGPT how to modify this because there aren't any resources that I could find that relates to AI behaviour that changes on a day/night cycle clock, and I am not a natural programmer.
+
+Like I said before, I don't want to be overly reliant on it as I feel less accomplished after using it, hence why I haven't used it at all up until around this point in the project, but I think personally that it is pretty sensible since the resources for what I want to do specifically are largely lacking.
+
+So the enemies whenever they shoot a bullet they seem to kill themselves, great.
+
+The behaviour is good, but something's up with the collider. Or something is going wrong, I don't know.
+
+I reset the collider and sprite positions, but the results are still the same?
+
+Idk at this point but the list is getting updated.
+
+- Tweak NPC teammates/enemies & their behaviour/movement based on day/night cycle and flag location
+- Gain points by hovering over flag
+- Player flashing when get hit
+- Points System UI in Game, and Game Over Display Screen

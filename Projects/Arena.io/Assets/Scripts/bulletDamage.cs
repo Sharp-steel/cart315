@@ -8,7 +8,7 @@ public class bulletDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerHealth playerHealth = collision.gameObject.GetComponent<playerHealth>();
+            Health playerHealth = collision.gameObject.GetComponent<Health>();
 
             if (playerHealth != null)
             {
@@ -18,7 +18,7 @@ public class bulletDamage : MonoBehaviour
         
         else if (collision.gameObject.tag == "Teammate")
         {
-            teammateHealth teammateHealth = collision.gameObject.GetComponent<teammateHealth>();
+            Health teammateHealth = collision.gameObject.GetComponent<Health>();
 
             if (teammateHealth != null)
             {
@@ -28,7 +28,7 @@ public class bulletDamage : MonoBehaviour
         
         else if (collision.gameObject.tag == "Enemy")
         {
-            enemyHealth enemyHealth = collision.gameObject.GetComponent<enemyHealth>();
+            Health enemyHealth = collision.gameObject.GetComponent<Health>();
 
             if (enemyHealth != null)
             {

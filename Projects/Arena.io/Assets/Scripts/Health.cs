@@ -1,9 +1,12 @@
 using UnityEngine;
+using System;
 
-public class enemyHealth : MonoBehaviour
+public class Health : MonoBehaviour
 {
     public int maxHealth = 2;
     public int currentHealth;
+
+    public event Action OnDeath;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,10 +15,21 @@ public class enemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (currentHealth <= 0) return;
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {
+        OnDeath?.Invoke();
+    }
+    
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
     }
 }

@@ -9,10 +9,13 @@ public class projectile : MonoBehaviour
     [SerializeField] private float lifetime;
 
     private float activeTimer;
+    
+    private Collider2D myCollider;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        myCollider = GetComponent<Collider2D>();
     }
 
     public void ShootBullet(Transform shootPoint)
@@ -21,6 +24,13 @@ public class projectile : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         transform.position = shootPoint.position;
         transform.rotation = shootPoint.rotation;
+        
+        Collider2D shooterCollider = shootPoint.GetComponentInParent<Collider2D>();
+        if (shooterCollider != null)
+        {
+            Physics2D.IgnoreCollision(myCollider, shooterCollider);
+        }
+        
         gameObject.SetActive(true);
         rb.AddForce(transform.up * speed, ForceMode2D.Impulse);
     }

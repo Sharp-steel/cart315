@@ -19,7 +19,7 @@ public class GunController : MonoBehaviour
         cooldownTimer += Time.deltaTime;
     }
 
-    private void Shooting()
+    public void Shooting()
     {
         if (cooldownTimer < cooldown) return;
         GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation, null);
