@@ -615,6 +615,29 @@ I reset the collider and sprite positions, but the results are still the same?
 Idk at this point but the list is getting updated.
 
 - Tweak NPC teammates/enemies & their behaviour/movement based on day/night cycle and flag location
+- Fix whatever is going wrong with the enemies
 - Gain points by hovering over flag
 - Player flashing when get hit
 - Points System UI in Game, and Game Over Display Screen
+
+At this point I'm going to make the player flash when they get hit.
+
+Well it turned out to be really easy, so I guess that evens out. It also applies to the enemies and teammates too.
+
+[![Player Flashing after getting shot](https://i.gyazo.com/eb19c0c3736d37924267a570200473ea.gif)](https://gyazo.com/eb19c0c3736d37924267a570200473ea)
+
+- Tweak NPC teammates/enemies & their behaviour/movement based on day/night cycle and flag location
+- Fix whatever is going wrong with the enemies
+- Gain points by hovering over flag
+- Points System UI in Game, and Game Over Display Screen
+
+Things are slowly starting to fix, because I am a doofus and assigned the wrong thing in the inspector, so the enemy team started crashing out on each other and killing each other (lol).
+
+I added the point system for when the team is hovering over the gameObject, but the game itself is not updating the scores.
+
+- Tweak NPCs & their movement (Avoid forming a Conga Line) & mix up movement between targeting the other team and moving towards the triangle flag
+- Fix enemies killing themselves with their own bullets
+- Fix why points aren't being earned by hovering over triangle flag
+- Add Points System UI during Game, and also at Game Over Display Screen, where winning team is displayed, with the total points, and number of points earned at each arena
+
+So I'm going to stop for now (today it is Easter Sunday) and resume work on Tuesday (I am visiting family for Easter Monday and need a break since I have been at this all weekend). But we are getting closer!

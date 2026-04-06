@@ -3,8 +3,9 @@ using UnityEngine;
 public class teleport : MonoBehaviour
 {
     public DayNightCycle dayNightCycle;
+    public controlZoneAndPoints[] controlZones;
     public Transform player;
-
+    
     public Transform[] enemies;
     public Transform[] teammates;
     public Transform[] arenas;
@@ -36,6 +37,12 @@ public class teleport : MonoBehaviour
 
     void TeleportAll(int index)
     {
+        for (int i = 0; i < controlZones.Length; i++)
+        {
+            if (controlZones[i] != null)
+                controlZones[i].isActive = (i == index);
+        }
+        
         Transform arena = arenas[index];
         Transform allyAnchor = arena.Find("AllySpawn");
         Transform enemyAnchor = arena.Find("EnemySpawn");

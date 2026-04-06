@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 64
+  controlID: 65
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 303.2
     height: 434.4
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 65
+  controlID: 66
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 66
+  controlID: 67
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -708,16 +708,16 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 50734
+    - m_Data: 52522
     m_LastClickedID:
-      m_Data: 50734
+      m_Data: 52522
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50406
-    - m_Data: 50408
-    - m_Data: 50410
-    - m_Data: 50412
-    - m_Data: 50414
+    - m_Data: 52192
+    - m_Data: 52194
+    - m_Data: 52196
+    - m_Data: 52198
+    - m_Data: 52200
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -751,11 +751,11 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50406
-    - m_Data: 50408
-    - m_Data: 50410
-    - m_Data: 50412
-    - m_Data: 50414
+    - m_Data: 52192
+    - m_Data: 52194
+    - m_Data: 52196
+    - m_Data: 52198
+    - m_Data: 52200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -783,16 +783,16 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -42348
-    m_LastClickedInstanceID: -42348
+    - m_Data: -1620
+    m_LastClickedInstanceID: -1620
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 53268
     - m_Data: 48842
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Player 1
-      m_OriginalName: Player 1
+      m_Name: controlZoneAndPoints
+      m_OriginalName: controlZoneAndPoints
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -800,7 +800,7 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 50738
+        m_Data: 52988
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -909,22 +909,20 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 140.6}
       m_SelectedIDs:
-      - m_Data: -42348
+      - m_Data: -1620
       m_LastClickedID:
-        m_Data: -42348
+        m_Data: -1620
       m_ExpandedIDs:
-      - m_Data: -1882
-      - m_Data: -1856
-      - m_Data: -1830
-      - m_Data: -1804
-      - m_Data: -1752
-      - m_Data: -1314
+      - m_Data: -1868
+      - m_Data: -1620
+      - m_Data: -1554
+      - m_Data: -1364
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Enemy
+        m_OriginalName: Enemy
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -932,10 +930,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: 0
+          m_Data: -1920
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 4}
@@ -1513,9 +1511,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -2.1912432, y: 44.462086, z: -0.020799542}
+    m_Target: {x: 2.1098647, y: 20.49765, z: 10173.785}
     speed: 2
-    m_Value: {x: -2.1912432, y: 44.462086, z: -0.020799542}
+    m_Value: {x: 2.1098647, y: 20.49765, z: 10173.785}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1565,9 +1563,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.0643065
+    m_Target: 6.6052394
     speed: 2
-    m_Value: 3.0643065
+    m_Value: 6.6052394
   m_Ortho:
     m_Target: 1
     speed: 2

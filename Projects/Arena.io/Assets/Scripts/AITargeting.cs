@@ -6,6 +6,7 @@ public class AITargeting : MonoBehaviour
 {
     public DayNightCycle dayNightCycle;
     private AIDestinationSetter ai;
+    private controlZoneAndPoints currentZone;
     
     public List<Transform> enemies = new List<Transform>();
     public List<Transform> teammates = new List<Transform>();
@@ -24,16 +25,77 @@ public class AITargeting : MonoBehaviour
         
         if (Time.frameCount % 10 != 0) return;
         
+        FindActiveZone();
         ChooseTarget();
+    }
+    
+    void FindActiveZone()
+    {
+        controlZoneAndPoints[] zones = FindObjectsOfType<controlZoneAndPoints>();
+
+        foreach (var zone in zones)
+        {
+            if (zone.isActive)
+            {
+                currentZone = zone;
+                return;
+            }
+        }
+
+        currentZone = null;
     }
 
     void ChooseTarget()
     {
-        bool isDay = IsDayTime();
+        if (currentZone == null)
+        {
+            DefaultTargeting();
+            return;
+        }
 
+        bool isEnemyAI = CompareTag("Enemy");
+        
+        if (!currentZone.HasAllies() && !currentZone.HasEnemies())
+        {
+            SetTargetPosition(currentZone.GetPosition());
+            return;
+        }
+        
+        if (isEnemyAI)
+        {
+            if (currentZone.HasAllies())
+            {
+                Transform target = GetClosest(GetAllAllies());
+                if (target != null)
+                {
+                    ai.target = target;
+                    return;
+                }
+            }
+        }
+        else
+        {
+            if (currentZone.HasEnemies())
+            {
+                Transform target = GetClosest(enemies);
+                if (target != null)
+                {
+                    ai.target = target;
+                    return;
+                }
+            }
+        }
+        
+        DefaultTargeting();
+    }
+
+    void DefaultTargeting()
+    {
+        bool isDay = IsDayTime();
+        
         List<Transform> correctTargets = null;
         List<Transform> wrongTargets = null;
-
+        
         if (CompareTag("Enemy"))
         {
             correctTargets = GetAllAllies();
@@ -44,9 +106,9 @@ public class AITargeting : MonoBehaviour
             correctTargets = enemies;
             wrongTargets = GetAllAllies();
         }
-
+        
         Transform target = null;
-
+        
         if (!isDay)
         {
             target = GetClosest(correctTargets);
@@ -62,9 +124,14 @@ public class AITargeting : MonoBehaviour
         }
         
         if (target != null)
-        {
             ai.target = target;
-        }
+    }
+    
+    void SetTargetPosition(Vector3 pos)
+    {
+        GameObject temp = new GameObject("TempTarget");
+        temp.transform.position = pos;
+        ai.target = temp.transform;
     }
 
     Transform GetClosest(List<Transform> targets)
