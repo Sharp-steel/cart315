@@ -13,6 +13,10 @@ public class switchToGameOver : MonoBehaviour
         if (dayNightCycle.freezeTime)
         {
             gameOver = true;
+            if (PointManager.Instance != null)
+            {
+                PointManager.Instance.SaveFinalScores();
+            }
             SceneManager.LoadScene("EndOfGame");
         }
     }

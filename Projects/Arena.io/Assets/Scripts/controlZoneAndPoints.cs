@@ -3,57 +3,76 @@ using System.Collections.Generic;
 
 public class controlZoneAndPoints : MonoBehaviour
 {
-    public float pointsPerSecond = 1f;
+    public float allyScore = 0f;
+    public float enemyScore = 0f;
+    public float pps = 1f;
     public bool isActive = false;
 
-    public int allyScore = 0;
-    public int enemyScore = 0;
+    public List<Transform> allies = new List<Transform>();
+    public List<Transform> enemies = new List<Transform>();
 
-    private List<GameObject> allies = new List<GameObject>();
-    private List<GameObject> enemies = new List<GameObject>();
+    private float pointTimer = 0f;
 
-    void Update()
+    private void Update()
     {
         if (!isActive) return;
 
-        bool allyPresent = allies.Count > 0;
-        bool enemyPresent = enemies.Count > 0;
-
-        if (allyPresent && !enemyPresent)
-        {
-            allyScore += Mathf.RoundToInt(pointsPerSecond * Time.deltaTime);
-        }
-        else if (enemyPresent && !allyPresent)
-        {
-            enemyScore += Mathf.RoundToInt(pointsPerSecond * Time.deltaTime);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") || collision.CompareTag("Teammate"))
-        {
-            if (!allies.Contains(collision.gameObject))
-                allies.Add(collision.gameObject);
-        }
-        else if (collision.CompareTag("Enemy"))
-        {
-            if (!enemies.Contains(collision.gameObject))
-                enemies.Add(collision.gameObject);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (allies.Contains(collision.gameObject))
-            allies.Remove(collision.gameObject);
+        int allyCount = allies.Count;
+        int enemyCount = enemies.Count;
         
-        if (enemies.Contains(collision.gameObject))
-            enemies.Remove(collision.gameObject);
+        if (allyCount + enemyCount == 0)
+        {
+            pointTimer = 0f;
+            return;
+        }
+        
+        pointTimer += Time.deltaTime;
+        
+        if (pointTimer >= 1f)
+        {
+            if (allyCount > enemyCount)
+                allyScore += pps;
+            else if (enemyCount > allyCount)
+                enemyScore += pps;
+
+            pointTimer = 0f;
+        }
+    }
+    
+    public bool HasAllies()
+    {
+        return allies.Count > 0;
+    }
+    
+    public bool HasEnemies()
+    {
+        return enemies.Count > 0;
     }
 
-    public bool HasAllies() => allies.Count > 0;
-    public bool HasEnemies() => enemies.Count > 0;
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
 
-    public Vector3 GetPosition() => transform.position;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") || other.CompareTag("Teammate"))
+        {
+            if (!allies.Contains(other.transform))
+                allies.Add(other.transform);
+        }
+        else if (other.CompareTag("Enemy"))
+        {
+            if (!enemies.Contains(other.transform))
+                enemies.Add(other.transform);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") || other.CompareTag("Teammate"))
+            allies.Remove(other.transform);
+        else if (other.CompareTag("Enemy"))
+            enemies.Remove(other.transform);
+    }
 }

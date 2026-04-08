@@ -588,7 +588,7 @@ It took A LOT of debugging, but I finally got it to switch the scene to the Game
 
 Another update, and this time the respawn mechanics are done!
 
-Lowkey couldn't have done this without the help of ChatGPT, so yeah shoutouts to ChatGPT I guess? I don't like using it but it's a really helpful tool for whenever I get really stuck on something and I'm on a time crunch.
+Lowkey couldn't have done this without the help of ChatGPT, so yeah shoutouts to ChatGPT I guess? I don't like using it and I always get a bit of a guilty conscience about it but it's a really helpful tool for whenever I get really stuck on something and I'm on a time crunch.
 
 [![Dying and Respawning](https://i.gyazo.com/1d7dc08446ca70fcdb1e552cabbcd7a7.gif)](https://gyazo.com/1d7dc08446ca70fcdb1e552cabbcd7a7)
 
@@ -635,9 +635,57 @@ Things are slowly starting to fix, because I am a doofus and assigned the wrong 
 
 I added the point system for when the team is hovering over the gameObject, but the game itself is not updating the scores.
 
-- Tweak NPCs & their movement (Avoid forming a Conga Line) & mix up movement between targeting the other team and moving towards the triangle flag
+- Tweak NPCs & their movement (Avoid forming a Conga Line) & mix up movement between targeting the other team, retreating, surveying and moving towards the triangle flag
 - Fix enemies killing themselves with their own bullets
 - Fix why points aren't being earned by hovering over triangle flag
-- Add Points System UI during Game, and also at Game Over Display Screen, where winning team is displayed, with the total points, and number of points earned at each arena
+- Add Points System UI during Game, and also at Game Over Display Screen, where winning team is displayed, with the total amount of points per team, and number of points earned at each arena per team
 
 So I'm going to stop for now (today it is Easter Sunday) and resume work on Tuesday (I am visiting family for Easter Monday and need a break since I have been at this all weekend). But we are getting closer!
+
+---
+
+It's Tuesday today, and every time I try to fix the AI with ChatGPT, it just makes it worse. It also doesn't help that I don't know what I'm doing (I know what I want to do, but I don't know how to code what I want to do in order to accomplish the goal).
+
+For the points, I realize that my logic is a bit flawed, where if multiple teammates all decided to stand on the zone at once, then the points will accumulate by 5 instead of by 1, since it counts points for if anybody passes over the zone for over a second, so it should be that not more than 1 enemy, or player + team should gain points.
+
+And I realized that because the player, enemy and teammate collider were not directly attached to the parent, that the flag wasn't reading anything at all going inside it! So I added the corresponding tags to the colliders (which are a separate child of the prefab), and now it working!
+
+Finally something is WORKING!!!!
+
+And the to-do list grows shorter... kind of? I keep finding new things I need to add...
+
+- Tweak NPCs & their movement (Avoid forming a Conga Line) & mix up movement between targeting the other team, retreating, surveying and moving towards the triangle flag
+- Fix enemies killing themselves with their own bullets
+- Add Points System UI during Game, and also at Game Over Display Screen, where winning team is displayed, with the total amount of points per team, and number of points earned at each arena per team
+- Start Screen UI
+
+I'm gonna start focusing on add the UI now. Less time trying to fight code and ChatGPT and more time being productive!
+
+---
+
+### IMPORTANT NOTE
+
+I'm also going to change the name of my game from Arena.io to KOTH.io, as I think it better reflects the nature of the game. Since I took away my Arena customizer aspect, the name of the game wouldn't make any sense within that context. Since the game acts more like a KOTH-style game, I think that the title should reflect it (Also it's slightly easier to pronounce).
+
+---
+
+The UI is done for the most part! It's very basic, but at this point I'm just focusing on finishing gameplay rather than look/feel and any cool looking visuals. All I have to do is to add the point stats from the game and then reset them once the main menu button is clicked.
+
+![Main Menu UI](/Screenshots/MainMenuUI.png)
+![Game Over UI](/Screenshots/GameOverUITemplate.png)
+
+- Tweak NPCs & their movement (Avoid forming a Conga Line) & mix up movement between targeting the other team, retreating, surveying and moving towards the triangle flag
+- Fix enemies killing themselves with their own bullets
+- Add Points System UI during Game, and also at Game Over Display Screen, where winning team is displayed, with the total amount of points per team, and number of points earned at each arena per team
+
+And the point tracking is finally complete! So that means that the UI and Scene Navigation is completely done!
+
+![Final In Game UI](/Screenshots/FinalInGameUI.png)
+![Final Game Over UI](/Screenshots/FinalGameOverUI.png)
+
+I think that this'll be the prototype I present for the final class. Unless someone else can help me with bug fixing the enemies before then, I'm done!
+
+The final checklist update before the final submission:
+
+- Fix NPC movement behaviour
+- Fix enemies killing themselves with their own bullets (probably an issue with the prefab)

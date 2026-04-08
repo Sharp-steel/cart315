@@ -8,11 +8,32 @@ public class AITargeting : MonoBehaviour
     private AIDestinationSetter ai;
     private controlZoneAndPoints currentZone;
     
+    [SerializeField] private float targetOffsetRadius = 1.5f;
+    [SerializeField] private float wanderRadius = 3f;
+    [SerializeField] private float separationRadius = 1.2f;
+    [SerializeField] private float separationStrength = 2f;
+    [SerializeField] private float zoneRadius = 2.5f;
+    
     public List<Transform> enemies = new List<Transform>();
     public List<Transform> teammates = new List<Transform>();
     public Transform player;
     
     [Range(0f, 1f)] public float dayDetection = 0.8f;
+    
+    [Range(0f, 1f)] public float attackRate = 0.7f;
+    [Range(0f, 1f)] public float captureRate = 0.8f;
+    [Range(0f, 1f)] public float wanderRate = 0.2f;
+    
+    private enum AIState { CaptureZone, DefendZone, AttackEnemy, Retreat, Survey }
+    private AIState currentState;
+    private float stateTimer;
+    private Transform tempTarget;
+    
+    void Awake()
+    {
+        tempTarget = new GameObject("TempTarget").transform;
+        tempTarget.parent = transform;
+    }
     
     void Start()
     {
@@ -23,16 +44,21 @@ public class AITargeting : MonoBehaviour
     {
         if (ai == null || dayNightCycle == null) return;
         
-        if (Time.frameCount % 10 != 0) return;
-        
         FindActiveZone();
-        ChooseTarget();
+        
+        stateTimer -= Time.deltaTime;
+        if (stateTimer <= 0)
+        {
+            ChooseState();
+            stateTimer = Random.Range(1.5f, 3f);
+        }
+
+        ExecuteState();
     }
     
     void FindActiveZone()
     {
         controlZoneAndPoints[] zones = FindObjectsOfType<controlZoneAndPoints>();
-
         foreach (var zone in zones)
         {
             if (zone.isActive)
@@ -41,134 +67,143 @@ public class AITargeting : MonoBehaviour
                 return;
             }
         }
-
         currentZone = null;
     }
-
-    void ChooseTarget()
+    
+    void ChooseState()
     {
         if (currentZone == null)
         {
-            DefaultTargeting();
+            currentState = AIState.Survey;
             return;
         }
 
         bool isEnemyAI = CompareTag("Enemy");
-        
-        if (!currentZone.HasAllies() && !currentZone.HasEnemies())
+        bool alliesOnZone = currentZone.HasAllies();
+        bool enemiesOnZone = currentZone.HasEnemies();
+        float rand = Random.value;
+        bool isNight = !IsDayTime();
+
+        if (!alliesOnZone && !enemiesOnZone)
         {
-            SetTargetPosition(currentZone.GetPosition());
+            currentState = AIState.CaptureZone;
             return;
         }
-        
+
         if (isEnemyAI)
         {
-            if (currentZone.HasAllies())
-            {
-                Transform target = GetClosest(GetAllAllies());
-                if (target != null)
-                {
-                    ai.target = target;
-                    return;
-                }
-            }
+            currentState = (alliesOnZone && (isNight || rand < attackRate)) ? AIState.AttackEnemy : AIState.DefendZone;
         }
         else
         {
-            if (currentZone.HasEnemies())
-            {
-                Transform target = GetClosest(enemies);
-                if (target != null)
-                {
-                    ai.target = target;
-                    return;
-                }
-            }
+            currentState = (enemiesOnZone && (isNight || rand < attackRate)) ? AIState.AttackEnemy : AIState.DefendZone;
         }
-        
-        DefaultTargeting();
+
+        if (rand < wanderRate) currentState = AIState.Survey;
     }
-
-    void DefaultTargeting()
+    
+    void ExecuteState()
     {
-        bool isDay = IsDayTime();
-        
-        List<Transform> correctTargets = null;
-        List<Transform> wrongTargets = null;
-        
-        if (CompareTag("Enemy"))
+        switch (currentState)
         {
-            correctTargets = GetAllAllies();
-            wrongTargets = enemies;
+            case AIState.CaptureZone: MoveToZone(); break;
+            case AIState.DefendZone: CircleZone(); break;
+            case AIState.AttackEnemy: AttackNearest(); break;
+            case AIState.Retreat: RetreatFromEnemies(); break;
+            case AIState.Survey: Wander(); break;
         }
-        else if (CompareTag("Teammate"))
+    }
+    
+    void MoveToZone()
+    {
+        Vector2 offset = Random.insideUnitCircle.normalized * zoneRadius;
+        SetTargetPosition(currentZone.GetPosition() + new Vector3(offset.x, offset.y, 0));
+    }
+    
+    void CircleZone()
+    {
+        float angle = Random.Range(0f, Mathf.PI * 2f);
+        Vector3 offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * zoneRadius;
+        SetTargetPosition(currentZone.GetPosition() + offset);
+    }
+    
+    void AttackNearest()
+    {
+        List<Transform> targets = CompareTag("Enemy") ? GetAllAllies() : enemies;
+        Transform target = GetClosest(targets);
+        if (target != null) SetTargetPosition(target.position);
+    }
+    
+    void RetreatFromEnemies()
+    {
+        List<Transform> targets = CompareTag("Enemy") ? GetAllAllies() : enemies;
+        Transform threat = GetClosest(targets);
+        if (threat != null)
         {
-            correctTargets = enemies;
-            wrongTargets = GetAllAllies();
+            Vector3 dir = (transform.position - threat.position).normalized;
+            SetTargetPosition(transform.position + dir * 3f);
         }
-        
-        Transform target = null;
-        
-        if (!isDay)
-        {
-            target = GetClosest(correctTargets);
-        }
-        else
-        {
-            bool chooseCorrect = Random.value <= dayDetection;
-
-            if (chooseCorrect || wrongTargets.Count == 0)
-                target = GetClosest(correctTargets);
-            else
-                target = GetClosest(wrongTargets);
-        }
-        
-        if (target != null)
-            ai.target = target;
+    }
+    
+    void Wander()
+    {
+        Vector2 random = Random.insideUnitCircle * wanderRadius;
+        SetTargetPosition(transform.position + new Vector3(random.x, random.y, 0));
     }
     
     void SetTargetPosition(Vector3 pos)
     {
-        GameObject temp = new GameObject("TempTarget");
-        temp.transform.position = pos;
-        ai.target = temp.transform;
+        Vector3 separation = GetSeparationOffset();
+        Vector2 offset = Random.insideUnitCircle * targetOffsetRadius;
+        tempTarget.position = pos + separation + new Vector3(offset.x, offset.y, 0);
+        ai.target = tempTarget;
+    }
+    
+    Vector3 GetSeparationOffset()
+    {
+        Collider2D[] nearby = Physics2D.OverlapCircleAll(transform.position, separationRadius);
+        Vector3 offset = Vector3.zero;
+
+        foreach (var col in nearby)
+        {
+            if (col.gameObject == gameObject) continue;
+            if (col.CompareTag("Enemy") || col.CompareTag("Teammate"))
+            {
+                Vector3 diff = transform.position - col.transform.position;
+                float dist = diff.magnitude;
+                if (dist > 0) offset += diff.normalized / dist;
+            }
+        }
+        return offset * separationStrength;
     }
 
     Transform GetClosest(List<Transform> targets)
     {
         Transform closest = null;
         float minDistance = Mathf.Infinity;
-
         foreach (Transform t in targets)
         {
             if (t == null) continue;
-            
             float distance = Vector2.Distance(transform.position, t.position);
-
             if (distance < minDistance)
             {
                 minDistance = distance;
                 closest = t;
             }
         }
-        
         return closest;
     }
 
     List<Transform> GetAllAllies()
     {
         List<Transform> allies = new List<Transform>(teammates);
-        
-        if (player != null)
-            allies.Add(player);
-        
+        if (player != null) allies.Add(player);
         return allies;
     }
 
     bool IsDayTime()
     {
         float m = dayNightCycle.mins;
-        
         return (m >= 0.5f && m < 0.66f) ||
                (m >= 3f && m < 3.16f) ||
                (m >= 5.5f && m < 5.66f);
