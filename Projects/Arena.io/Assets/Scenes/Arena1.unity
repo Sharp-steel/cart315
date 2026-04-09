@@ -2020,7 +2020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayNightCycle
   volume: {fileID: 1745087044}
-  tick: 5
+  tick: 1
   seconds: 0
   mins: 0
   squares:

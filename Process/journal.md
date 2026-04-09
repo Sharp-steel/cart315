@@ -698,3 +698,8 @@ Now the respawn works, but the points system is broken... I'M GOING TO CRASH OUT
 
 I fixed it, but the enemies gain points for the allies only. Not good.
 
+IT WAS A STUPID TAG I DIDN'T CHANGE!!!!!!!
+
+Anyways it's fixed now and the game is finished!!! The AI movement is a bit wonky but good enough!
+
+Shoutouts to Jimmy and Arielle for helping me fix the issue.
