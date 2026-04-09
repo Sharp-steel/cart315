@@ -689,3 +689,12 @@ The final checklist update before the final submission:
 
 - Fix NPC movement behaviour
 - Fix enemies killing themselves with their own bullets (probably an issue with the prefab)
+
+Just before the class I replaced the existing enemy prefab by copying the functioning teammate prefab and turning it into the enemy prefab, and adjusting parameters accordingly.
+
+The game works (on a shoe-string but it's still playable!), but I need to fix the respawn mechanics, since everyone gets sent back to the first arena when they die.
+
+Now the respawn works, but the points system is broken... I'M GOING TO CRASH OUT THIS GAME DOESN'T WANT TO WORK!!!!
+
+I fixed it, but the enemies gain points for the allies only. Not good.
+
