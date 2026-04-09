@@ -12,6 +12,14 @@ public class teleport : MonoBehaviour
 
     public float spacing = 1.5f;
     private int currentIndex = -1;
+    public int CurrentArenaIndex => currentIndex;
+    
+    void Start()
+    {
+        currentIndex = 0;
+        TeleportAll(currentIndex);
+        UpdateZoneActivity(currentIndex);
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,6 +34,7 @@ public class teleport : MonoBehaviour
         {
             currentIndex = newIndex;
             TeleportAll(currentIndex);
+            UpdateZoneActivity(currentIndex);
         }
 
         if (mins == 0f && currentIndex != 0)
@@ -71,5 +80,15 @@ public class teleport : MonoBehaviour
         float yOffset = startY - (index * spacing);
 
         return start + new Vector3(0, yOffset, 0);
+    }
+    
+    void UpdateZoneActivity(int index)
+    {
+        var zones = FindObjectsOfType<controlZoneAndPoints>();
+
+        foreach (var zone in zones)
+        {
+            zone.isActive = (zone.arenaIndex == index);
+        }
     }
 }

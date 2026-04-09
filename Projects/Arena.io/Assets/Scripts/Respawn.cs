@@ -7,16 +7,20 @@ public class Respawn : MonoBehaviour
     public bool isAlly = true;
 
     private Health health;
+    private teleport teleportSystem;
     private Transform spawnPoint;
     
     private SpriteRenderer[] renderers;
     private Collider2D[] colliders;
-
+    
+    private int deathArenaIndex;
+    
     void Awake()
     {
         health = GetComponent<Health>();
         renderers = GetComponentsInChildren<SpriteRenderer>();
         colliders = GetComponentsInChildren<Collider2D>();
+        teleportSystem = FindObjectOfType<teleport>();
     }
 
     void OnEnable()
@@ -33,6 +37,8 @@ public class Respawn : MonoBehaviour
 
     void HandleDeath()
     {
+        if (teleportSystem != null)
+            deathArenaIndex = teleportSystem.CurrentArenaIndex;
         StartCoroutine(RespawnCoroutine());
     }
 
@@ -63,39 +69,35 @@ public class Respawn : MonoBehaviour
         MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
         foreach (var script in scripts)
         {
-            if (script != this) // don’t disable Respawn itself
+            if (script != this)
                 script.enabled = state;
         }
     }
 
     void SetSpawnPoint()
     {
-        GameObject currentArena = null;
-        
-        for (int i = 1; i <= 4; i++)
+        if (teleportSystem == null)
         {
-            GameObject arena = GameObject.Find("Arena" + i);
-            if (arena != null && arena.activeInHierarchy)
-            {
-                currentArena = arena;
-                break;
-            }
+            Debug.LogWarning("Teleport system not found!");
+            return;
         }
 
-        if (currentArena != null)
-        {
-            string spawnName = isAlly ? "AllySpawn" : "EnemySpawn";
-            Transform sp = currentArena.transform.Find(spawnName);
+        int index = deathArenaIndex;
 
-            if (sp != null)
-                spawnPoint = sp;
-            else 
-                Debug.LogWarning($"Spawn point '{spawnName}' not found in {currentArena.name}");
+        if (index < 0 || index >= teleportSystem.arenas.Length)
+        {
+            Debug.LogWarning("Invalid arena index");
+            return;
         }
 
+        Transform arena = teleportSystem.arenas[index];
+
+        string spawnName = isAlly ? "AllySpawn" : "EnemySpawn";
+        Transform sp = arena.Find(spawnName);
+
+        if (sp != null)
+            spawnPoint = sp;
         else
-        {
-            Debug.LogWarning("No active arena can be found");
-        }
+            Debug.LogWarning($"Spawn point '{spawnName}' not found in {arena.name}");
     }
 }

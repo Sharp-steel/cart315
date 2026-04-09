@@ -8,18 +8,19 @@ public class controlZoneAndPoints : MonoBehaviour
     public float pps = 1f;
     public bool isActive = false;
 
-    public List<Transform> allies = new List<Transform>();
-    public List<Transform> enemies = new List<Transform>();
+    private int allyCount = 0;
+    private int enemyCount = 0;
 
     private float pointTimer = 0f;
+    public int arenaIndex;
 
     private void Update()
     {
         if (!isActive) return;
-
-        int allyCount = allies.Count;
-        int enemyCount = enemies.Count;
         
+        allyCount = Mathf.Max(0, allyCount);
+        enemyCount = Mathf.Max(0, enemyCount);
+
         if (allyCount + enemyCount == 0)
         {
             pointTimer = 0f;
@@ -41,12 +42,12 @@ public class controlZoneAndPoints : MonoBehaviour
     
     public bool HasAllies()
     {
-        return allies.Count > 0;
+        return allyCount > 0;
     }
     
     public bool HasEnemies()
     {
-        return enemies.Count > 0;
+        return enemyCount > 0;
     }
 
     public Vector3 GetPosition()
@@ -58,21 +59,23 @@ public class controlZoneAndPoints : MonoBehaviour
     {
         if (other.CompareTag("Player") || other.CompareTag("Teammate"))
         {
-            if (!allies.Contains(other.transform))
-                allies.Add(other.transform);
+            allyCount++;
         }
         else if (other.CompareTag("Enemy"))
         {
-            if (!enemies.Contains(other.transform))
-                enemies.Add(other.transform);
+            enemyCount++;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") || other.CompareTag("Teammate"))
-            allies.Remove(other.transform);
+        {
+            allyCount--;
+        }
         else if (other.CompareTag("Enemy"))
-            enemies.Remove(other.transform);
+        {
+            enemyCount--;
+        }
     }
 }

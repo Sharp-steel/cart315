@@ -503,6 +503,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::teleport
   dayNightCycle: {fileID: 1745087043}
+  controlZones:
+  - {fileID: 2733874129075991031}
+  - {fileID: 6047065247193727830}
+  - {fileID: 1740663788792369528}
+  - {fileID: 6153251067745301921}
   player: {fileID: 8906523143114536786}
   enemies:
   - {fileID: 200596162}
@@ -2877,18 +2882,6 @@ MonoBehaviour:
   enemyScore: 0
   pps: 1
   isActive: 0
-  teammates:
-  - {fileID: 8906523143114536786}
-  - {fileID: 1254656291}
-  - {fileID: 1320598417}
-  - {fileID: 916130071}
-  - {fileID: 1746679689}
-  enemies:
-  - {fileID: 200596162}
-  - {fileID: 1967293278}
-  - {fileID: 377126469}
-  - {fileID: 1433936735}
-  - {fileID: 1894897469}
   arenaIndex: 2
 --- !u!1001 &2733874129075991028
 PrefabInstance:
@@ -3060,18 +3053,6 @@ MonoBehaviour:
   enemyScore: 0
   pps: 1
   isActive: 0
-  teammates:
-  - {fileID: 8906523143114536786}
-  - {fileID: 1254656291}
-  - {fileID: 1320598417}
-  - {fileID: 916130071}
-  - {fileID: 1746679689}
-  enemies:
-  - {fileID: 200596162}
-  - {fileID: 1967293278}
-  - {fileID: 377126469}
-  - {fileID: 1433936735}
-  - {fileID: 1894897469}
   arenaIndex: 0
 --- !u!4 &5287342989791143605 stripped
 Transform:
@@ -3232,18 +3213,6 @@ MonoBehaviour:
   enemyScore: 0
   pps: 1
   isActive: 0
-  teammates:
-  - {fileID: 8906523143114536786}
-  - {fileID: 1254656291}
-  - {fileID: 1320598417}
-  - {fileID: 916130071}
-  - {fileID: 1746679689}
-  enemies:
-  - {fileID: 200596162}
-  - {fileID: 1967293278}
-  - {fileID: 377126469}
-  - {fileID: 1433936735}
-  - {fileID: 1894897469}
   arenaIndex: 1
 --- !u!1001 &6153251067745301918
 PrefabInstance:
@@ -3399,18 +3368,6 @@ MonoBehaviour:
   enemyScore: 0
   pps: 1
   isActive: 0
-  teammates:
-  - {fileID: 8906523143114536786}
-  - {fileID: 1254656291}
-  - {fileID: 1320598417}
-  - {fileID: 916130071}
-  - {fileID: 1746679689}
-  enemies:
-  - {fileID: 200596162}
-  - {fileID: 1967293278}
-  - {fileID: 377126469}
-  - {fileID: 1433936735}
-  - {fileID: 1894897469}
   arenaIndex: 3
 --- !u!4 &7841063663946237048 stripped
 Transform:
