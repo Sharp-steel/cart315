@@ -505,7 +505,7 @@ Also while I'm at it here's my current to-do list:
 - Make simple particle effect for bullet collision (Not a must, could scrap if need be)
 - Player flashing when hit (Again could be really helpful but I'll do this at the end)
 
-## DESIGN JOURNAL - Final Iterative Prototype - Week 11
+## DESIGN JOURNAL - Iterative Prototype - Week 11
 
 So I decided to prioritize the day/night cycle system. I found a good tutorial that helped me out a lot with how it worked: [Day/Night Cycle tutorial](https://www.youtube.com/watch?v=ihurRMKz2es)
 
@@ -703,3 +703,20 @@ IT WAS A STUPID TAG I DIDN'T CHANGE!!!!!!!
 Anyways it's fixed now and the game is finished!!! The AI movement is a bit wonky but good enough!
 
 Shoutouts to Jimmy and Arielle for helping me fix the issue.
+
+## DESIGN JOURNAL - Final Prototype - Week 12
+
+For this final prototype, my aim is to correct the enemy and teammate AI movement to make it more realistic.
+
+Most of the feedback that I received from the prototype session consisted of improving the AI, however, there were also some interesting comments regarding the gameplay loop. Arielle mentioned that the map shape makes it easy to determine who is the enemy, but once the player is on the yellow triangle, determining who is who becomes significantly more difficult, as well as the gameplay becomes way more challenging.
+
+Therefore, I want to keep the difficulty level when on the yellow triangle, but make the game flow more smoothly and seamlessly with the NPC movement.
+
+
+
+---
+
+### Closing Thoughts
+
+How did you integrate your previous prototypes into this final experiment? 
+Are you leaning on implementation, look/feel, or role prototypes more? Where are you focusing your efforts?
