@@ -28,6 +28,7 @@ public class AITargeting : MonoBehaviour
     private AIState currentState;
     private float stateTimer;
     private Transform tempTarget;
+    private Vector2 wanderDirection;
     
     void Awake()
     {
@@ -43,16 +44,13 @@ public class AITargeting : MonoBehaviour
     void Update()
     {
         if (ai == null || dayNightCycle == null) return;
-        
         FindActiveZone();
-        
         stateTimer -= Time.deltaTime;
         if (stateTimer <= 0)
         {
             ChooseState();
             stateTimer = Random.Range(1.5f, 3f);
         }
-
         ExecuteState();
     }
     
@@ -116,14 +114,24 @@ public class AITargeting : MonoBehaviour
     
     void MoveToZone()
     {
-        Vector2 offset = Random.insideUnitCircle.normalized * zoneRadius;
-        SetTargetPosition(currentZone.GetPosition() + new Vector3(offset.x, offset.y, 0));
+        Vector3 zoneCenter = currentZone.GetPosition();
+        float dist = Vector2.Distance(transform.position, zoneCenter);
+        float dynamicRadius = Mathf.Lerp(0.5f, zoneRadius, dist / 5f);
+        Vector2 offset = Random.insideUnitCircle * dynamicRadius;
+        offset += (Vector2)(transform.right * Mathf.Sin(Time.time * 2f));
+        SetTargetPosition(zoneCenter + new Vector3(offset.x, offset.y, 0));
     }
     
     void CircleZone()
     {
-        float angle = Random.Range(0f, Mathf.PI * 2f);
+        float orbitSpeed = 1.5f;
+        float angle = Time.time * orbitSpeed;
         Vector3 offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * zoneRadius;
+        offset += new Vector3(
+            Mathf.Sin(Time.time * 3f),
+            Mathf.Cos(Time.time * 2f),
+            0
+        ) * 0.5f;
         SetTargetPosition(currentZone.GetPosition() + offset);
     }
     
@@ -131,7 +139,20 @@ public class AITargeting : MonoBehaviour
     {
         List<Transform> targets = CompareTag("Enemy") ? GetAllAllies() : enemies;
         Transform target = GetClosest(targets);
-        if (target != null) SetTargetPosition(target.position);
+        if (target != null)
+        {
+            Rigidbody2D rb = target.GetComponent<Rigidbody2D>();
+            Vector3 predictedPos = target.position;
+            if (rb != null)
+            {
+                predictedPos += (Vector3)rb.linearVelocity * 0.5f;
+            }
+            Vector3 strafe = Vector3.Cross(
+                (predictedPos - transform.position).normalized,
+                Vector3.forward
+            ) * Mathf.Sin(Time.time * 4f);
+            SetTargetPosition(predictedPos + strafe);
+        }
     }
     
     void RetreatFromEnemies()
@@ -140,15 +161,19 @@ public class AITargeting : MonoBehaviour
         Transform threat = GetClosest(targets);
         if (threat != null)
         {
-            Vector3 dir = (transform.position - threat.position).normalized;
-            SetTargetPosition(transform.position + dir * 3f);
+            Vector3 away = (transform.position - threat.position).normalized;
+            Vector3 side = Vector3.Cross(away, Vector3.forward) * Mathf.Sin(Time.time * 3f);
+            Vector3 retreatPos = transform.position + away * 3f + side * 1.5f;
+            SetTargetPosition(retreatPos);
         }
     }
     
     void Wander()
     {
-        Vector2 random = Random.insideUnitCircle * wanderRadius;
-        SetTargetPosition(transform.position + new Vector3(random.x, random.y, 0));
+        wanderDirection += Random.insideUnitCircle * 0.2f;
+        wanderDirection = wanderDirection.normalized;
+        Vector3 targetPos = transform.position + new Vector3(wanderDirection.x, wanderDirection.y, 0) * wanderRadius;
+        SetTargetPosition(targetPos);
     }
     
     void SetTargetPosition(Vector3 pos)

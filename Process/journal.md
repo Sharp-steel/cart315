@@ -712,6 +712,12 @@ Most of the feedback that I received from the prototype session consisted of imp
 
 Therefore, I want to keep the difficulty level when on the yellow triangle, but make the game flow more smoothly and seamlessly with the NPC movement.
 
+So I managed to tweak the movement, and even know the enemy and teammates still do the funny spinning movement, the behaviour works great! Also the spinning gives the game a little bit of extra spice and makes it kind of funny.
+
+Once the arena swapping enemy and teammate issue is fixed, the game is done!
+
+So here is the issue with the arena swapping: Since I divided it across 4 different pathfinding grids, A* Pathfinding isn't able to recognize that the pathfinding has been swapped. Now they move properly. However, the still are targeting the first point zone from the first arena.
+
 
 
 ---
