@@ -5,8 +5,10 @@ using System.Collections.Generic;
 public class AITargeting : MonoBehaviour
 {
     public DayNightCycle dayNightCycle;
+    public teleport teleport;
     private AIDestinationSetter ai;
     private controlZoneAndPoints currentZone;
+    private controlZoneAndPoints lastZone;
     
     [SerializeField] private float targetOffsetRadius = 1.5f;
     [SerializeField] private float wanderRadius = 3f;
@@ -44,7 +46,20 @@ public class AITargeting : MonoBehaviour
     void Update()
     {
         if (ai == null || dayNightCycle == null) return;
-        FindActiveZone();
+        currentZone = teleport.currentZone;
+
+        if (currentZone != lastZone)
+        {
+            lastZone = currentZone;
+
+            stateTimer = 0f;
+
+            if (currentZone != null)
+            {
+                tempTarget.position = currentZone.GetPosition();
+                Debug.Log("AI switched to zone: " + currentZone.name);
+            }
+        }
         stateTimer -= Time.deltaTime;
         if (stateTimer <= 0)
         {
@@ -52,20 +67,6 @@ public class AITargeting : MonoBehaviour
             stateTimer = Random.Range(1.5f, 3f);
         }
         ExecuteState();
-    }
-    
-    void FindActiveZone()
-    {
-        controlZoneAndPoints[] zones = FindObjectsOfType<controlZoneAndPoints>();
-        foreach (var zone in zones)
-        {
-            if (zone.isActive)
-            {
-                currentZone = zone;
-                return;
-            }
-        }
-        currentZone = null;
     }
     
     void ChooseState()
@@ -178,6 +179,11 @@ public class AITargeting : MonoBehaviour
     
     void SetTargetPosition(Vector3 pos)
     {
+        var nn = AstarPath.active.GetNearest(pos);
+        if (nn.node != null && nn.node.Walkable)
+        {
+            pos = (Vector3)nn.position;
+        }
         Vector3 separation = GetSeparationOffset();
         Vector2 offset = Random.insideUnitCircle * targetOffsetRadius;
         tempTarget.position = pos + separation + new Vector3(offset.x, offset.y, 0);

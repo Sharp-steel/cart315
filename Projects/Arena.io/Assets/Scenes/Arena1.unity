@@ -194,6 +194,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: attackRate
       value: 0.5
       objectReference: {fileID: 0}
@@ -249,6 +253,10 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[3]'
       value: 
       objectReference: {fileID: 1746679689}
+    - target: {fileID: 1310585091120573867, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3309864811035336325, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -340,6 +348,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: attackRate
       value: 0.5
       objectReference: {fileID: 0}
@@ -395,6 +407,10 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[3]'
       value: 
       objectReference: {fileID: 1746679689}
+    - target: {fileID: 1310585091120573867, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3309864811035336325, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -526,6 +542,7 @@ MonoBehaviour:
   - {fileID: 1489995144639910196}
   - {fileID: 7841063663946237048}
   spacing: 1.5
+  currentZone: {fileID: 0}
 --- !u!4 &399075340
 Transform:
   m_ObjectHideFlags: 0
@@ -864,6 +881,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 4267100271952240602, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 4267100271952240602, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
       propertyPath: attackRate
       value: 0.5
       objectReference: {fileID: 0}
@@ -911,6 +932,10 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[2]'
       value: 
       objectReference: {fileID: 1746679689}
+    - target: {fileID: 4467147139730033200, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5378577923455784997, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
       propertyPath: m_Name
       value: Teammate (3)
@@ -1155,12 +1180,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: AstarPathfindingProject::AstarPath
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+uegxwscAIAACYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty2jAU/RVG68LYPELSXWsI6YKECe1k442QrrEGWfJIMo9k+PdeyTZ2KRvkc+7jnKtrfxGhbAnMabMygq81B/J9QPyZfBt05Auc6V6rrfiENuZDcJf7IBpi3qkTGvHYp1ldgDOC/VB76YMjBCslMm2KJd9Doq2zCGdUWkDKaOezFUJfA3LGv+GTT7ngaTz3p088PUWDKx4ZKAemFzptIqejWYS/cRP+OIqmDw/xchjNQ16lmKRFCdyb6NLjxzY/jiYhUKHBJsabYVpKYRt1xF3K4D6hpa3QGwZwQdFtkBSPJgjkIPa589r76W9ZZsE1wzD0shAGx1bXJT91PcuC2kOt7Uhl5Ts9Bk11yfV/7DAOdGZ08dJ2jSPfweWCHd7phVHreqPuw4ue8DCgE5UHupPwkYN61SujK8WRdKbyqZWF8aJ7vBlLcmCHDq+l3oFV2U28vdn2Xr2Ha/B+TqQodp4aTWtgK3WYd1gHMHgzv1BwWBbblEDUq/hj4Tfd97eqIZ6FsQ6pxqXy8na6Mj6ULMPMvJvKJdooCHAjugRFpbtssIy7v8A7rtf2jnmm/v1pmjdc+1rcpQS4i4+iO2qjT7fLsrk+rcHmb5WTQkEn2hOvOKdEK1XvV38mbdq2MhllvbR9Jfi/q0VmbD6e8+lkxyaTXTyHIZ3xOcAkgvGUUTpjJOyeUOiTyk0ttBkP3prqiivcs/azMlgZWoZd54aeVuKz0L2RC5XpLTMA6q2ucBMOBpvgW8mXXOCAtuCcUOG+yVdKpGYH4OmtUBqcLs/O0LSrkpJSHLXzSEqS8B1JiYdvu7wxcBRw8s3bYldy/QtQSwMEFAAACAgAAJif6yDcT19tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJpsrmReYqJcVKysXGSoXmqbqJpinlqqrFBqpFJcmKiabJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif656DHCxwAgAAJgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6yDcT19tAAAAeAAAAAkAJAAAAAAAAAAAAAAAvQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB1AwAAAAA=
+    dataString: UEsDBBQAAAgIAACYn+uBTje3eAIAADAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxwQTorTWE9JCECe3k4ossrbEGW/JIcoBk+O9dyTZ26Qnx3n68fVr5iwhpKmBW6a0W/FlxIN9HxJ3Jt1FPPsGZHpTci0/oYt4Ft7kLoj7mjVqhEA9dmlElWC3YD3koXHCAYC1FpnS54QeIlbEG4YwWBpDSyrpsidDXiJzxZ7xyKRc8TRfu9ImnVTC64pGBtKAHodEkeFjMwqhLmKxm82C1WkZd3mQ5ixbRbDMOFr5CLVlBywq4G6cvFC4f2hJhGyhx1DbGjcVUUQjT6iT2UnkfYlqZGqfEAC4ozu3FhZMZAjmIQ26dqGH6a5YZsK0tml7WQqOBTV3yUzWultQcG20ftKhdp6XX1JR8/o8dh57OtCqfuq5h4DrYXLDjG70wauzA9CG8Hgj3Bp1ocaRpAe85yBe11aqWHEmra5daG5iu+7+3weIc2LHHG6l3YF31jnd33N2wm+HqZz/HhShTR02iBtgXyvvtFwM03swvFOzXxrQlEHUq/hj4TQ/D/WqJR6GNRaqdUjp5qaq1CyUb75mbprax0hI83IquQNLCXnZYxt5f4B03aHvHPFL3ktrmLdc9kLsUD/fxQXBH7dTpdlkmV6dnMPlrbQshoRftiBf0KVZSNvs19KRL29c6o2yQdqgF/3e1yGwaRtGUUb4KlukinY/T+SLjD5DOI8b4MpsTv3tC4py02DVCW3vw1mRfXOKedR+Y0VbTyu861/S0FZ+lGlguZKb2TAPI16bCTThobIKvkm+4QIP2YK2Q/r7JV0IKxY7Ak1uhxE+6OVtNk75KQirxoaxDEhL7L0pCHHzb5Z2GDwEn17wrdiXXv1BLAwQUAAAICAAAmJ/r0Pqq/20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0krGRoYmJUXJiiqWBRZJ5kqlukql5WopZapKpSXJyikWaqVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAmJ/rgU43t3gCAAAwBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/r0Pqq/20AAAB4AAAACQAkAAAAAAAAAAAAAADFAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAH0DAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -1237,7 +1262,7 @@ Transform:
   m_GameObject: {fileID: 1022285128}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4, y: 3.1, z: 0}
   m_LocalScale: {x: 0.93636, y: 0.93636, z: 0.93636}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1509,6 +1534,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 4267100271952240602, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 4267100271952240602, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
       propertyPath: attackRate
       value: 0.6
       objectReference: {fileID: 0}
@@ -1556,6 +1585,10 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[2]'
       value: 
       objectReference: {fileID: 1746679689}
+    - target: {fileID: 4467147139730033200, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5378577923455784997, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
       propertyPath: m_Name
       value: Teammate (1)
@@ -1711,6 +1744,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 4267100271952240602, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 4267100271952240602, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
       propertyPath: attackRate
       value: 0.3
       objectReference: {fileID: 0}
@@ -1758,6 +1795,10 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[2]'
       value: 
       objectReference: {fileID: 1746679689}
+    - target: {fileID: 4467147139730033200, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5378577923455784997, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
       propertyPath: m_Name
       value: Teammate (2)
@@ -1825,6 +1866,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: attackRate
       value: 0.8
       objectReference: {fileID: 0}
@@ -1880,6 +1925,10 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[3]'
       value: 
       objectReference: {fileID: 1746679689}
+    - target: {fileID: 1310585091120573867, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3309864811035336325, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: m_Name
       value: Enemy (4)
@@ -2020,7 +2069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayNightCycle
   volume: {fileID: 1745087044}
-  tick: 5
+  tick: 1
   seconds: 0
   mins: 0
   squares:
@@ -2119,6 +2168,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 4267100271952240602, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 4267100271952240602, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
       propertyPath: attackRate
       value: 0.7
       objectReference: {fileID: 0}
@@ -2166,6 +2219,14 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[2]'
       value: 
       objectReference: {fileID: 916130071}
+    - target: {fileID: 4467147139730033200, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: alwaysDrawGizmos
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467147139730033200, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5378577923455784997, guid: d57e94aa0398f8a4392a5e8b02a7fded, type: 3}
       propertyPath: m_Name
       value: Teammate (4)
@@ -2317,6 +2378,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: attackRate
       value: 0.6
       objectReference: {fileID: 0}
@@ -2372,6 +2437,10 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[3]'
       value: 
       objectReference: {fileID: 1746679689}
+    - target: {fileID: 1310585091120573867, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3309864811035336325, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: m_Name
       value: Enemy (5)
@@ -2463,6 +2532,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8906523143114536786}
     - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 399075339}
+    - target: {fileID: 790107271715570530, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: attackRate
       value: 0.8
       objectReference: {fileID: 0}
@@ -2518,6 +2591,10 @@ PrefabInstance:
       propertyPath: 'teammates.Array.data[3]'
       value: 
       objectReference: {fileID: 1746679689}
+    - target: {fileID: 1310585091120573867, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
+      propertyPath: endReachedDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3309864811035336325, guid: 9d4b5e726e5221d429ca5ddc24c5a092, type: 3}
       propertyPath: m_Name
       value: Enemy (2)

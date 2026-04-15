@@ -718,11 +718,26 @@ Once the arena swapping enemy and teammate issue is fixed, the game is done!
 
 So here is the issue with the arena swapping: Since I divided it across 4 different pathfinding grids, A* Pathfinding isn't able to recognize that the pathfinding has been swapped. Now they move properly. However, the still are targeting the first point zone from the first arena.
 
-
+So the logic is fine, I debugged the issue and the code correctly targets the right Win Condition zone, however, they still for some reason want to pathfind to the original win condition zone. So it updates the zone to target, but they won't target it no matter what I do or even ChatGPT does, and honestly, I'm not in the mood anymore to push the A* Pathfinding algorithm further, so this will be the final version.
 
 ---
 
 ### Closing Thoughts
 
-How did you integrate your previous prototypes into this final experiment? 
-Are you leaning on implementation, look/feel, or role prototypes more? Where are you focusing your efforts?
+Honestly, even though I didn't get the complete outcome I was searching for, at least the first 2 and a half minutes are playable (as opposed to the rest of the 10 minutes).
+
+From the beginning, it was interesting to see the process and how it played out. I started by participating in a Game Jam, which really helped pave the way for this class. Then I learned how to use Unity (Implementation), and afterwards starting thinking about game ideas (Role/Look-Feel). This culminated in Week 6 when I came up with the eventual idea that inspired KOTH.io.
+
+In Week 7, I honed in on the role prototype, but ended up going too overboard. I didn't really focus on the gameplay loop but rather a literal interpretation of the meaning of role prototype (that's kind of how my brain works). Either way, it was enough to not add anything else to it for the rest of the game making process.
+
+I did a little bit of look/feel in Week 8, when I decided that the game would be 2D after feedback from Arielle and Nisma.
+
+After that, it was purely implementation. This was because coding the AI took up most of the time, where I ran into simply too many issues.
+
+If there is one thing that I wish I could've done, is that I wanted to implement the look/feel prototype more into this project, by adding custom made sprites to give the game a bit more of a .io game feel to it, but I don't regret the decision that I made to focus on implementation.
+
+The type of game that I made in the end was completely different from what I normally play, I don't play shooters really, but it was a cool experiment to try something out that I wouldn't have done otherwise. I wanted to implement more of a strategy component to it, much like the games I had outlined in Week 5.
+
+Despite the eventual shortcomings with the AI programming, I'm still really proud of what I've accomplished, and as my first game in Unity and learning C# for the first time, I think I did a really good job!
+
+And finally, here is the link to the (semi-functional) completed game! [KOTH.io](https://sh4rpsteel.itch.io/kothio)

@@ -13,12 +13,12 @@ public class teleport : MonoBehaviour
     public float spacing = 1.5f;
     private int currentIndex = -1;
     public int CurrentArenaIndex => currentIndex;
+    public controlZoneAndPoints currentZone;
     
     void Start()
     {
         currentIndex = 0;
         TeleportAll(currentIndex);
-        UpdateZoneActivity(currentIndex);
     }
 
     // Update is called once per frame
@@ -34,7 +34,6 @@ public class teleport : MonoBehaviour
         {
             currentIndex = newIndex;
             TeleportAll(currentIndex);
-            UpdateZoneActivity(currentIndex);
         }
 
         if (mins == 0f && currentIndex != 0)
@@ -52,21 +51,25 @@ public class teleport : MonoBehaviour
                 controlZones[i].isActive = (i == index);
         }
         
+        currentZone = controlZones[index];
+        
+        Debug.Log("Active Zone set to: " + currentZone.name);
+        
         Transform arena = arenas[index];
         Transform allyAnchor = arena.Find("AllySpawn");
         Transform enemyAnchor = arena.Find("EnemySpawn");
         
         int totalAllies = teammates.Length + 1;
-        
+
         if (player != null)
             player.position = GetPosition(allyAnchor.position, 0, totalAllies);
-        
+
         for (int i = 0; i < teammates.Length; i++)
         {
             if (teammates[i] != null)
                 teammates[i].position = GetPosition(allyAnchor.position, i + 1, totalAllies);
         }
-        
+
         for (int i = 0; i < enemies.Length; i++)
         {
             if (enemies[i] != null)
@@ -78,17 +81,6 @@ public class teleport : MonoBehaviour
     {
         float startY = (total - 1) * spacing / 2f;
         float yOffset = startY - (index * spacing);
-
         return start + new Vector3(0, yOffset, 0);
-    }
-    
-    void UpdateZoneActivity(int index)
-    {
-        var zones = FindObjectsOfType<controlZoneAndPoints>();
-
-        foreach (var zone in zones)
-        {
-            zone.isActive = (zone.arenaIndex == index);
-        }
     }
 }
